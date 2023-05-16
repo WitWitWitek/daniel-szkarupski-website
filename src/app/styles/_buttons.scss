@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+@mixin btn(
+    $fcolor: $white,
+    $bgc: transparent,
+    $br-color: $white,
+) {
+    font-family: inherit;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid $br-color;
+    margin-right: 5px;
+    cursor: pointer;
+    color: $fcolor;
+    background-color: $bgc;
+    &:hover {
+        background-color: $fcolor;
+        color: $bgc;
+        border: 2px $bgc solid;
+    }
+}

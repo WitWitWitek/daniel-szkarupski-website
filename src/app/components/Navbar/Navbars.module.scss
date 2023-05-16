@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+@use '../../styles/buttons' as *;
+
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    inset: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 75px;
+
+    a {
+        text-decoration: none;
+        color: $white;
+        margin: 0 5px;
+    }
+}
+
+.supportBtn {
+    @include btn($white, $red);
+    height: 100%;
+}
+
+.joinBtn {
+    @include btn;
+}
