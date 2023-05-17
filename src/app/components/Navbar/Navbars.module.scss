@@ -1,21 +1,35 @@
 @use '../../styles/variables' as *;
 @use '../../styles/buttons' as *;
+@use '../../styles/breakpoints' as *;
 
 .navbar {
-    background-color: transparent;
+    background-color: $mainBlue;
     position: fixed;
     inset: 0;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
     height: 75px;
 
     a {
         text-decoration: none;
         color: $white;
         margin: 0 5px;
+    }
+
+    &__logo {
+        margin-left: 0.5rem;
+    }
+
+    &__burger-btn {
+        border: none;
+        background-color: transparent;
+        margin-right: 0.5rem;
+    }
+    
+    &__wrapper {
+        display: none;
     }
 }
 
@@ -26,4 +40,16 @@
 
 .joinBtn {
     @include btn;
+}
+
+@include md {
+    .navbar {
+        &__burger-btn {
+            display: none;
+        }
+
+        &__wrapper {
+            display: flex;
+        }
+    }
 }
