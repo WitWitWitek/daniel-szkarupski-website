@@ -13,12 +13,16 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
-    background-image: url('../../assets/wave-bg.svg');
-    background-size: cover;
+    background-image: url('/wave-background.svg');
+    background-size: 300%;
+    background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
 
     &__header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         & > :nth-child(n) {
             margin-top: 0.75rem;
         }
@@ -84,10 +88,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         align-items: center;
+        background-size: 150%;
         &__header {
             width: 65%;
             grid-column: 1 / 2 ;
-            justify-self: right;
             & > :nth-child(n) {
                 margin-top: 1rem;
             }
@@ -105,7 +109,12 @@
         &__image {
             grid-column: 2 / 3 ;
             align-self: unset;
-            justify-self: left;
         } 
+    }
+}
+
+@include md {
+    .banner {
+        background-size: 110%;
     }
 }

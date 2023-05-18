@@ -13,7 +13,7 @@ export default function HomeBanner() {
         </div>
       </div>
       <div className={styles["banner__image"]}>
-        <Image src='/daniel.png' alt='Daniel Szkarupski zdjęcie promocyjne' fill />
+        <Image src='/daniel-cover.png' alt='Daniel Szkarupski zdjęcie promocyjne' fill />
       </div>
     </section>
   )
