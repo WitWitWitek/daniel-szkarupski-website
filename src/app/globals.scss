@@ -23,8 +23,18 @@ body > :nth-child(n) {
   padding: 0 1rem;
 }
 
-@include sm {
+body > :nth-child(2) {
+  padding-top: $paddingSectionTop;
+}
+
+
+
+@include xs {
   body > :nth-child(n) {
     padding: 0 10%;
   }
-}
+
+  body > :nth-child(2) {
+    padding-top: $paddingSectionTop;
+  }
+} 

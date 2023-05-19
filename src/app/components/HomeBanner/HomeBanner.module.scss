@@ -11,7 +11,7 @@
     color: $white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 55% 45%;
     justify-items: center;
     background-image: url('/wave-background.svg');
     background-size: 300%;
@@ -29,14 +29,15 @@
 
         h1 {
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 5px;
             text-align: center;
         }
 
         p {
             text-align: center;
+            width: 100%;
         }
     }
 
@@ -47,11 +48,11 @@
     }
 
     &__support-btn {
-        @include btn($white, $red);
+        @include btn-cta($white, $red);
     }
 
     &__join-btn {
-        @include btn;
+        @include btn-cta;
     }
 
     &__image {
@@ -65,30 +66,39 @@
 
 @include xs {
     .banner {
-        grid-template-rows: 55% 45%;
+        grid-template-rows: 60% 40%;
+        background-size: 200%;
+        background-position: bottom;
         &__header {
             & > :nth-child(n) {
                 margin-top: 1rem;
             }
-    
+            
             h1 {
                 font-size: 2.5rem;
+            }
+
+            p {
+                width: 90%;
             }
         }
 
         &__image {
-            width: 80%;
+            width: 100%;
             aspect-ratio: 1 / 1;
+            max-height: 90%;
+            max-width: 350px;
         } 
     }
 }
 
-@include sm {
+@include md {
     .banner {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         align-items: center;
-        background-size: 150%;
+        background-position: bottom;
+        background-size: 110%;
         &__header {
             width: 65%;
             grid-column: 1 / 2 ;
@@ -97,8 +107,9 @@
             }
     
             h1 {
-                font-size: 3.5rem;
+                font-size: 4rem;
                 text-align: center;
+                line-height: 4rem;
             }
 
             p {
@@ -109,12 +120,7 @@
         &__image {
             grid-column: 2 / 3 ;
             align-self: unset;
+            max-width: 550px;
         } 
-    }
-}
-
-@include md {
-    .banner {
-        background-size: 110%;
     }
 }
