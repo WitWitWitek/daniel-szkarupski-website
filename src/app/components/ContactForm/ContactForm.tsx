@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import useContactForm from '../../hooks/useContactForm';
-
+import styles from './ContactForm.module.scss'
 export interface FormContent {
   name: string,
   email: string,
@@ -40,80 +40,83 @@ export default function ContactForm() {
   }, [isSuccess]);
 
   return (
-    <form onSubmit={onFormSubmission} className="contact-form">
-      <label className="contact-form__label" htmlFor="name">
-        Imię:
-        <input
-          id="name"
-          name="name"
-          type="text"
-          maxLength={50}
-          onChange={onFormChange}
-          value={formContent.name}
-          className="contact-form__input"
-          required
-        />
-      </label>
-      <label className="contact-form__label" htmlFor="email">
-        E-mail:
-        <input
-          id="email"
-          name="email"
-          type="email"
-          maxLength={50}
-          onChange={onFormChange}
-          value={formContent.email}
-          className="contact-form__input"
-          required
-        />
-      </label>
+    <section className={styles["contact-form"]}>
+      <h2 id='kontakt' className={styles["contact-form__heading"]}>Formularz kontaktowy</h2>
+      <form onSubmit={onFormSubmission} className={styles["contact-form__form"]}>
+        <label htmlFor="name" className={styles["contact-form__label"]}>
+          Imię i nazwisko:
+          <input
+            id="name"
+            name="name"
+            type="text"
+            maxLength={50}
+            onChange={onFormChange}
+            value={formContent.name}
+            className={styles["contact-form__input"]}
+            required
+          />
+        </label>
+        <label htmlFor="email" className={styles["contact-form__label"]}>
+          E-mail:
+          <input
+            id="email"
+            name="email"
+            type="email"
+            maxLength={50}
+            onChange={onFormChange}
+            value={formContent.email}
+            className={styles["contact-form__input"]}
+            required
+          />
+        </label>
 
-      <label className="contact-form__label" htmlFor="subject">
-        Temat:
-        <input
-          id="subject"
-          name="subject"
-          type="text"
-          maxLength={50}
-          onChange={onFormChange}
-          value={formContent.subject}
-          className="contact-form__input"
-          required
-        />
-      </label>
+        <label htmlFor="subject" className={styles["contact-form__label"]}>
+          Temat:
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            maxLength={50}
+            onChange={onFormChange}
+            value={formContent.subject}
+            className={styles["contact-form__input"]}
+            required
+          />
+        </label>
 
-      <label className="contact-form__label" htmlFor="text">
-        Opis:
-        <textarea
-          id="text"
-          name="text"
-          maxLength={500}
-          onChange={onFormChange}
-          value={formContent.text}
-          className="contact-form__textarea"
-          required
-        />
-      </label>
+        <label htmlFor="text" className={styles["contact-form__label"]}>
+          Opis:
+          <textarea
+            id="text"
+            name="text"
+            maxLength={500}
+            onChange={onFormChange}
+            value={formContent.text}
+            className={styles["contact-form__textarea"]}
+            required
+          />
+        </label>
 
-      <button
-        type="submit"
-        className="contact-form__button"
-        disabled={isLoading}
-      >
-        {!isLoading ? 'Wyślij' : <p className="contact-form__spinner" />}
-      </button>
-      {isSuccess && !isError && (
-        <div className="contact-form__success">
-          <p>✓</p>
-          <div>Wysłano poprawnie</div>
-        </div>
-      )}
-      {!isSuccess && isError && (
-        <div className="contact-form__error">
-          <p>X</p>
-          <div>Błąd wysyłania forumlarza</div>
-        </div>
-      )}
-    </form>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className={styles["contact-form__button"]}
+        >
+          {!isLoading ? 'Wyślij' : 'Wysyłam...'}
+        </button>
+        {isSuccess && !isError && (
+          <div className={styles["contact-form__success"]}>
+            <p>✓</p>
+            <div>Wysłano poprawnie</div>
+          </div>
+        )}
+        {!isSuccess && isError && (
+          <div className={styles["contact-form__error"]}>
+            <p>X</p>
+            <div>Błąd wysyłania forumlarza</div>
+          </div>
+        )}
+      </form>
+    </section>
   );
 }

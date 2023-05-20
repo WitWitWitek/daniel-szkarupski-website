@@ -23,6 +23,12 @@
         color: $bgc;
         border: 2px $bgc solid;
     }
+
+    &:disabled {
+        background-color: $fcolor;
+        color: $bgc;
+        border: 2px $bgc solid;
+    }
 }
 
 @mixin navbar-btn {

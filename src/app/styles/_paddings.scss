@@ -1,0 +1,18 @@
+@use './breakpoints' as *;
+@use './variables' as *;
+
+@mixin section-padding {
+    padding: $paddingSectionTop 1rem 1rem;
+
+    @include xs {
+        padding: $paddingSectionTop 10% 1rem;
+    }
+}
+
+@mixin nav-padding {
+    padding: 0 1rem;
+
+    @include xs {
+        padding: 0 10%;
+    }
+}
