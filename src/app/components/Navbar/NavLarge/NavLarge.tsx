@@ -12,7 +12,7 @@ export default function NavLarge() {
       </div>
       <div>
         <Link href='/' className={styles["navbar__join-btn"]}>Dołącz do nas</Link>
-        <Link href='/' className={styles["navbar__support-btn"]}>Wesprzyj</Link>
+        <a href='https://wesprzyjrn.pl/' className={styles["navbar__support-btn"]}>Wesprzyj</a>
       </div>
     </div>
   )

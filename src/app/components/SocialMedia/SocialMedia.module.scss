@@ -1,0 +1,67 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/paddings' as *;
+
+.social-media {
+    width: 100%;
+    background-color: $mainBlue;
+    @include section-padding;
+    h2 {
+        color: $white;
+        text-align: center;
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__facebook, &__twitter {
+        margin-top: 2rem;
+        width: 200px;
+        height: 500px;
+        overflow-y: auto;
+        position: relative;
+        background-color: $white;
+    }
+
+    &__facebook {
+        overflow: unset;
+    }
+}
+
+@include xs {
+    .social-media {
+        &__facebook, &__twitter {
+            width: 300px;
+        }
+    }
+}
+
+
+@include sm {
+    .social-media {
+        &__container {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+        &__facebook, &__twitter {
+            margin-top: 2rem;
+            width: 300px;
+        }
+    }
+}
+
+@include md {
+    .social-media {
+        width: 100%;
+    
+        &__facebook, &__twitter {
+            margin-top: 2rem;
+            width: 500px;
+        }
+    }
+}

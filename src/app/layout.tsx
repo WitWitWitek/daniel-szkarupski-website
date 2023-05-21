@@ -23,7 +23,7 @@ export default function RootLayout({
           async
           defer
           crossOrigin='anonymous'
-          src='https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0'
+          src='https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v16.0'
           nonce='lCqYkqwv'
         />
         <Script
