@@ -7,7 +7,7 @@ export default function NavLarge() {
       <div>
         <Link href='/' className={styles["navbar__link"]} >O mnie</Link>
         <Link href='/' className={styles["navbar__link"]} >Blog</Link>
-        <Link href='/' className={styles["navbar__link"]} >Social Media</Link>
+        <a href='/#social-media' className={styles["navbar__link"]} >Social Media</a>
         <a href='/#kontakt' className={styles["navbar__link"]} >Kontakt</a>
       </div>
       <div>
