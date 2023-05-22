@@ -2,10 +2,10 @@
 @use './variables' as *;
 
 @mixin section-padding {
-    padding: $paddingSectionTop 1rem 1rem;
+    padding: 1rem;
 
     @include xs {
-        padding: $paddingSectionTop 10% 1rem;
+        padding: 1rem 10%;
     }
 }
 

@@ -1,14 +1,14 @@
 @use '../../styles/breakpoints' as *;
 @use '../../styles/variables' as *;
 @use '../../styles/paddings' as *;
+@use '../../styles/headings' as *;
 
 .social-media {
     width: 100%;
     background-color: $mainBlue;
     @include section-padding;
     h2 {
-        color: $white;
-        text-align: center;
+        @include section-heading($white);
     }
     &__container {
         width: 100%;
@@ -25,6 +25,7 @@
         overflow-y: auto;
         position: relative;
         background-color: $white;
+        overflow-x: hidden;
     }
 
     &__facebook {

@@ -1,0 +1,22 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/paddings' as *;
+@use '../../styles/headings' as *;
+
+.join-us {
+    width: 100%;
+    background-color: $mainBlue;
+    @include section-padding;
+    h2 {
+        @include section-heading($white);
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

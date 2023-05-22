@@ -1,0 +1,32 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+@mixin section-heading($color: $mainBlue) {
+    color: $color;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: inherit;
+    letter-spacing: 0.25rem;
+    margin: 1rem 0;
+
+    &::after {
+        content: '';
+        display: block;
+        margin: auto;
+        width: 6rem;
+        height: 5px;
+        background-color: $red;
+        opacity: 1;
+        margin: 0.5rem auto;
+    }
+    @include xs {
+        font-size: 2rem;
+    }
+    @include sm {
+        font-size: 2.2rem;
+    }
+    @include md {
+        font-size: 2.5rem;
+    }
+}

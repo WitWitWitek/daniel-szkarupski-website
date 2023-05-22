@@ -9,6 +9,7 @@
     height: 100vh;
     padding: 0 10px;
     @include section-padding;
+    padding-top: $paddingSectionTop;
     color: $white;
     display: grid;
     grid-template-columns: 1fr;
@@ -64,10 +65,13 @@
 
 @include xs {
     .banner {
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 45% 55%;
         background-size: 200%;
         background-position: bottom;
+        padding-top: $paddingSectionTop;
         &__header {
+            justify-content: flex-start;
+            gap: 1rem;
             h1 {
                 font-size: 2.5rem;
             }
@@ -81,7 +85,7 @@
             width: 100%;
             aspect-ratio: 1 / 1;
             max-height: 90%;
-            max-width: 288px;
+            max-width: 250px;
             align-self: flex-end;
         } 
     }

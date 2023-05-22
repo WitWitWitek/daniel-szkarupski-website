@@ -2,16 +2,15 @@
 @use '../../styles/buttons' as *;
 @use '../../styles/breakpoints' as *;
 @use '../../styles//paddings' as *;
+@use '../../styles/headings' as *;
 
 .contact-form {
     background-color: $white;
     width: 100%;
-    min-height: 100vh;
     @include section-padding;
 
     &__heading {
-        text-align: center;
-        font-size: 2rem;
+        @include section-heading;
     }
 
     &__form {
@@ -25,10 +24,10 @@
     &__label {
         font-family: inherit;
         font-weight: 700;
-
     }
 
     &__input, &__textarea {
+        font-family: inherit;
         display: block;
         max-width: 100%;
         min-width: 100%;
@@ -40,7 +39,7 @@
     }
 
     &__textarea {
-        height: 10rem;
+        height: 12rem;
         resize: none;
     }
 
