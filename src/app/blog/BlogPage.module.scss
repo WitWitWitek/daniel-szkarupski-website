@@ -1,0 +1,37 @@
+@use '../styles/breakpoints' as *;
+@use '../styles/buttons' as *;
+@use '../styles/headings' as *;
+@use '../styles/paddings' as *;
+@use '../styles/variables' as *;
+
+.blog-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10px;
+    @include section-padding;
+    padding-top: $paddingSectionTop;
+    &__title {
+        @include section-heading;
+    }
+
+    &__post {
+        &-image {
+            width: 100%;
+            height: 100px;
+            background-position: center;
+            background-color: $mainBlue;
+        }
+        &-title {
+
+        }
+        &-excerpt {
+            
+        }
+    }
+}
+
+@include xs {
+    .blog-page {
+        padding-top: $paddingSectionTop;
+    }
+}

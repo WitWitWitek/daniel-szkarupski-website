@@ -15,7 +15,7 @@ export default function NavSmall() {
       <div className={`${styles["navbar__backdrop"]} ${isMenuOpen ? styles["navbar__backdrop-active"] : ''}`} onClick={() => setMenuOpen(false)}></div>
       <div className={`${styles["navbar__menu"]} ${isMenuOpen ? styles["navbar__menu-active"] : ''}`}>
         <a href='/#o-mnie' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>O mnie</a>
-        <Link href='/' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>Blog</Link>
+        <Link href='/blog' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>Blog</Link>
         <a href='/#social-media' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>Social Media</a>
         <a href='/#kontakt' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>Kontakt</a>
         <Link href='/' className={styles["navbar__menu-link"]} onClick={() => setMenuOpen(false)}>Dołącz do nas</Link>

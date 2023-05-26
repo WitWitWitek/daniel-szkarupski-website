@@ -6,7 +6,7 @@ export default function NavLarge() {
     <div className={styles["navbar__wrapper"]}>
       <div>
         <a href='/#o-mnie' className={styles["navbar__link"]} >O mnie</a>
-        <Link href='/' className={styles["navbar__link"]} >Blog</Link>
+        <Link href='/blog' className={styles["navbar__link"]} >Blog</Link>
         <a href='/#social-media' className={styles["navbar__link"]} >Social Media</a>
         <a href='/#kontakt' className={styles["navbar__link"]} >Kontakt</a>
       </div>

@@ -1,6 +1,7 @@
 import Script from 'next/script'
 import Navbar from './components/Navbar/Navbar'
 import './globals.scss'
+import Footer from './components/Footer/Footer'
 export const metadata = {
   title: 'Daniel Szkarupski',
   description: 'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim',
@@ -18,6 +19,7 @@ export default function RootLayout({
         <>
           {children}
         </>
+        <Footer />
         <div id="fb-root"></div>
         <Script
           async
