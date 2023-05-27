@@ -1,15 +1,43 @@
-import { getSinglePost } from '@/app/lib/posts'
-import Link from 'next/link'
-import React from 'react'
-import Post from './components/Post'
+import { getPosts, getSinglePost } from '@/app/lib/posts';
+import React from 'react';
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import Post from './components/Post';
 
 type Params = {
-    params: {
-        slug: string
-    }
+  params: {
+    slug: string
+  }
+};
+
+export async function generateMetadata({ params: { slug } }: Params): Promise<Metadata> {
+  const post = await getSinglePost(slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    };
+  }
+
+  return {
+    title: `${post.title} | Daniel Szkarupski`,
+    description: post.excerpt,
+  };
 }
 
 export default async function PostPage({ params: { slug } }: Params) {
-    const post = await getSinglePost(slug);
-    return <Post post={post} />
+  const postData: Promise<Post | undefined> = getSinglePost(slug);
+  const post = await postData;
+
+  if (!post) {
+    notFound();
+  }
+  return <Post post={post} />;
+}
+
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }

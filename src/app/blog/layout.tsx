@@ -1,13 +1,13 @@
-import styles from './BlogPage.module.scss'
+import styles from './BlogPage.module.scss';
 
 export default function BlogPageLayout({
-    children
-  }: {
-    children: React.ReactNode;
-  }) {
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <section className={styles["blog-page"]}>
-        {children}
+    <section className={styles['blog-page']}>
+      {children}
     </section>
-  )
+  );
 }

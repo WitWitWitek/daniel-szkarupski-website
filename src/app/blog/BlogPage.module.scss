@@ -28,6 +28,12 @@
             
         }
     }
+
+    &__error-btn {
+        display: block;
+        @include btn-cta;
+        margin: auto;
+    }
 }
 
 @include xs {
