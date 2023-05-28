@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Link from 'next/link';
 import styles from '../Post.module.scss';
 
