@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './BlogPage.module.scss';
+import styles from '../BlogPage.module.scss';
 
 export default function Error({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars

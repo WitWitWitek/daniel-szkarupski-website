@@ -7,12 +7,20 @@ type PostProps = {
 };
 
 export default function Post({ post }: PostProps) {
-  const { title, html } = post;
+  const { title, html, feature_image } = post;
   return (
     <div>
-      <Link href="/blog">Powrót</Link>
-      <h2 className={styles.post__title}>{title}</h2>
-      <article dangerouslySetInnerHTML={{ __html: html }} />
+      <div
+        style={{ backgroundImage: `url(${feature_image})` }}
+        className={styles.post__image}
+      >
+        <Link href="/blog" className={styles['post__btn-back']}>Powrót do bloga</Link>
+        <h2 className={styles.post__title}>{title}</h2>
+      </div>
+      <article
+        className={styles.post__article}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 }

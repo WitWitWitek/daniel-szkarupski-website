@@ -14,10 +14,13 @@ export const getSinglePost = async (slug: string): Promise<Post | undefined> => 
   const res = await fetch(
     `${process.env.GHOST_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${process.env.CONTENT_API_KEY}`,
   );
-  const { posts } = await res.json() as { posts: Post[] };
-  if (Array.isArray(posts)) {
-    const [post] = posts;
-    return post;
+  const data = await res.json();
+  if ('posts' in data) {
+    const { posts } = data as { posts: Post[] };
+    if (Array.isArray(posts)) {
+      const [post] = posts;
+      return post;
+    }
   }
   return undefined;
 };

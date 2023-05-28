@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Navbar from './components/Navbar/Navbar';
 import './globals.scss';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Daniel Szkarupski',
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
         <div id="fb-root" />
         <Script
           async

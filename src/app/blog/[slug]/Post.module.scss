@@ -5,7 +5,39 @@
 @use '../../styles/variables' as *;
 
 .post {
+    &__image {
+        width: 100%;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        background-color: $mainBlue;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
     &__title {
         @include section-heading;
+        color: $white;
+        background-color: rgba(black, 0.5);
+        word-wrap: break-word;
+        width: 100%;
+        min-height: 5rem;
+    }
+
+    &__btn-back {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        @include btn-cta($white, $red);
+    }
+
+    &__article {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: justify;
+        font-family: inherit;
+        text-indent: 2rem;
     }
 }
