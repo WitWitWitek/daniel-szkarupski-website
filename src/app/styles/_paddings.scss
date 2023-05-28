@@ -5,6 +5,14 @@
     padding: 1rem;
 
     @include xs {
+        padding: 1rem 10%;
+    }
+
+    @include sm {
+        padding: 1rem 15%;
+    }
+
+    @include md {
         padding: 1rem 20%;
     }
 }
