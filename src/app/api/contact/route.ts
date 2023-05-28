@@ -1,34 +1,35 @@
-import transporter from '../../lib/nodemailer';
 import DOMPurify from 'isomorphic-dompurify';
 import { NextResponse } from 'next/server';
+import transporter from '../../lib/nodemailer';
 
+// eslint-disable-next-line import/prefer-default-export
 export async function POST(req: Request) {
-    const {
-      name, email, subject, text,
-    } = await req.json();
-    if (!name || !email || !subject || !text) {
-      return NextResponse.json({ message: 'Bad request' });
+  const {
+    name, email, subject, text,
+  } = await req.json();
+  if (!name || !email || !subject || !text) {
+    return NextResponse.json({ message: 'Bad request' });
+  }
+  try {
+    const cleanedName = DOMPurify.sanitize(name);
+    const cleanedEmail = DOMPurify.sanitize(email);
+    const cleanedSubject = DOMPurify.sanitize(subject);
+    const cleanedText = DOMPurify.sanitize(text);
+    await transporter.sendMail({
+      from: process.env.EMAIL,
+      to: process.env.RECIPENT_EMAIL,
+      subject: cleanedSubject,
+      text: 'This is a text string',
+      html: createContent({
+        name: cleanedName, email: cleanedEmail, subject: cleanedSubject, text: cleanedText,
+      }),
+    });
+    return NextResponse.json({ message: 'Message succesfully sent' });
+  } catch (err) {
+    if (err && typeof err === 'object' && 'message' in err) {
+      return NextResponse.json({ message: err.message as string });
     }
-    try {
-      const cleanedName = DOMPurify.sanitize(name);
-      const cleanedEmail = DOMPurify.sanitize(email);
-      const cleanedSubject = DOMPurify.sanitize(subject);
-      const cleanedText = DOMPurify.sanitize(text);
-      await transporter.sendMail({
-        from: process.env.EMAIL,
-        to: process.env.RECIPENT_EMAIL,
-        subject: cleanedSubject,
-        text: 'This is a text string',
-        html: createContent({
-          name: cleanedName, email: cleanedEmail, subject: cleanedSubject, text: cleanedText,
-        }),
-      });
-      return NextResponse.json({ message: 'Message succesfully sent' });
-    } catch (err) {
-      if (err && typeof err === 'object' && 'message' in err) {
-        return NextResponse.json({ message: err.message as string });
-      }
-    }
+  }
   return NextResponse.json({ message: 'Bad request' });
 }
 

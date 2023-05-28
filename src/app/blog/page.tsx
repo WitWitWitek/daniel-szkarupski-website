@@ -15,7 +15,7 @@ export default async function BlogPage() {
   return (
     <>
       <h1 className={styles['blog-page__title']}>Blog:</h1>
-      <ul>
+      <ul className={styles['blog-page__list']}>
         {posts.map((post) => <PostListItem key={post.slug} postItem={post} />)}
       </ul>
     </>

@@ -1,6 +1,6 @@
 export const getPosts = async (): Promise<PostItem[]> => {
   const res = await fetch(
-    `${process.env.GHOST_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&fields=title,slug,excerpt,feature_image`,
+    `${process.env.GHOST_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&fields=title,slug,excerpt,feature_image, created_at`,
     { next: { revalidate: 120 } },
   );
   if (!res.ok) {
