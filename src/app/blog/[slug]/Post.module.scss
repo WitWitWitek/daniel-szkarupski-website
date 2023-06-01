@@ -40,4 +40,16 @@
         font-family: inherit;
         text-indent: 2rem;
     }
+
+    &__gallery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        &-image {
+            max-height: 200px;
+            max-width: 100%;
+        }
+    }
 }
