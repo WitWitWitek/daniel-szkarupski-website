@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import parse, {
   HTMLReactParserOptions, Element, domToReact, DOMNode,
 } from 'html-react-parser';
+import galleryHandler from '@/app/lib/galleryHandler';
 import styles from '../Post.module.scss';
 import PostYouTube from './PostYouTube';
 
@@ -28,19 +31,20 @@ interface IframeElement extends Element {
 
 const isImgElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
 const isIframeElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'iframe';
+const isGalleryContainerElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.attribs?.class?.includes('kg-gallery-card');
 const options: HTMLReactParserOptions = {
   replace: (domNode) => {
-    // if (
-    //   domNode instanceof Element && domNode.attribs?.class?.includes('kg-gallery-card')) {
-    //   const galleryCardChild = domNode.childNodes[0];
-    //   const galleryContainerChildren = (galleryCardChild as Element).childNodes[0];
-    //   const galleryRows = (galleryContainerChildren as Element).childNodes;
-    //   const imgs = (galleryRows as Element[]).map(
-    //     (image) => (image.childNodes[0] as ImgElement).attribs,
-    //   );
-    //   console.log(domNode);
-    //   return <ImageGallery images={imgs} />;
-    // }
+    if (isGalleryContainerElement(domNode)) {
+      const { children } = domNode as Element;
+      if (Array.isArray(children)) {
+        const result: Element[] = [];
+        galleryHandler(children[0] as unknown as Element, result);
+        console.log(result);
+      }
+      return (
+        <div />
+      );
+    }
     if (isImgElement(domNode)) {
       const { children } = domNode as Element;
       return (

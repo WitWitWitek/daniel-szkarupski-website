@@ -22,7 +22,7 @@ export default function PostListItem({ postItem }: PostListItemProps) {
       <time className={styles['blog-page__post-time']}>{dateHandler(created_at)}</time>
       <div className={styles['blog-page__post-excerpt']}>
         <p className={styles['blog-page__post-excerpt-paragraph-extended']}>{excerpt}</p>
-        <p className={styles['blog-page__post-excerpt-paragraph']}>{`${excerpt.substring(0, 200)}...`}</p>
+        <p className={styles['blog-page__post-excerpt-paragraph']}>{`${excerpt !== null ? excerpt.substring(0, 200) : excerpt}...`}</p>
         <Link href={`/blog/${slug}`} className={styles['blog-page__post-btn']}>Czytaj całość</Link>
       </div>
     </li>
