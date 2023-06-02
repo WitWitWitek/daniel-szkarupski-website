@@ -1,11 +1,9 @@
-'use client';
-
+/* eslint-disable @typescript-eslint/naming-convention */
 import Link from 'next/link';
 import parse, {
   HTMLReactParserOptions, Element, domToReact, DOMNode,
 } from 'html-react-parser';
 import styles from '../Post.module.scss';
-import ImageGallery from './PostGallery';
 
 type PostProps = {
   post: Post
@@ -20,7 +18,7 @@ interface ImgElement extends Element {
   attribs: Image,
 }
 
-const isImgelement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
+const isImgElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
 
 const options: HTMLReactParserOptions = {
   replace: (domNode) => {
@@ -35,8 +33,7 @@ const options: HTMLReactParserOptions = {
     //   console.log(domNode);
     //   return <ImageGallery images={imgs} />;
     // }
-    if (
-      isImgelement(domNode)) {
+    if (isImgElement(domNode)) {
       const { children } = domNode as Element;
       return (
         <div>
@@ -44,24 +41,26 @@ const options: HTMLReactParserOptions = {
             replace: (imgNode) => {
               const imgElement = imgNode as ImgElement;
               return (
-                <img
-                  className={styles['post__gallery-image']}
-                  src={imgElement.attribs.src}
-                  alt={imgElement.attribs.alt}
-                />
+                <figure className={styles.post__figure}>
+                  <img
+                    className={styles['post__figure-image']}
+                    src={imgElement.attribs.src}
+                    alt={imgElement.attribs.alt}
+                  />
+                  <figcaption className={styles['post__figure-figcaption']}>{imgElement.attribs.alt}</figcaption>
+                </figure>
               );
             },
           })}
         </div>
       );
     }
-    return null;
+    return domNode;
   },
 };
 
 export default function Post({ post }: PostProps) {
   const { title, html, feature_image } = post;
-  const parsedHtml = parse(html, options);
   return (
     <div>
       <div
@@ -71,13 +70,9 @@ export default function Post({ post }: PostProps) {
         <Link href="/blog" className={styles['post__btn-back']}>Powrót do bloga</Link>
         <h2 className={styles.post__title}>{title}</h2>
       </div>
-      {/* <article
-        className={styles.post__article}
-        dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
-      <div>
+      <article className={styles.post__article}>
         {parse(html, options)}
-      </div>
+      </article>
     </div>
   );
 }

@@ -39,6 +39,26 @@
         text-align: justify;
         font-family: inherit;
         text-indent: 2rem;
+        word-wrap: break-word;
+        line-height: 30px;
+    }
+
+    &__figure {
+        width: 100%;
+        margin: 1rem auto;
+        &-image {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        &-figcaption {
+            font-family: inherit;
+            font-weight: 300;
+            text-align: center;
+            font-style: italic;
+            color: $gray;
+            margin: 0.5rem auto;
+        }
     }
 
     &__gallery {
@@ -47,9 +67,34 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
-        &-image {
-            max-height: 200px;
-            max-width: 100%;
+        
+    }
+}
+
+@include sm {
+    .post {
+        &__article {
+            font-size: 18px;
+        }
+
+        &__figure {
+            &-image {
+                max-width: 100%;
+                max-height: 300px;
+            }
+            &-figcaption {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@include md {
+    .post {
+        &__figure {
+            &-image {
+                max-height: 500px;
+            }
         }
     }
 }
