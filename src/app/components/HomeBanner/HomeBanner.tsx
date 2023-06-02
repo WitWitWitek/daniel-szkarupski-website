@@ -16,8 +16,8 @@ export default function HomeBanner() {
           Maiores optio eius aliquid temporibus.
         </p>
         <div className={styles['banner__btn-container']}>
-          <button className={styles['banner__support-btn']} type="button">Wesprzyj</button>
-          <button className={styles['banner__join-btn']} type="button">Dołącz do nas</button>
+          <a href="https://wesprzyjrn.pl/" className={styles['banner__support-btn']}>Wesprzyj</a>
+          <a href="/#dolacz-do-nas" className={styles['banner__join-btn']}>Dołącz do nas</a>
         </div>
       </div>
       <div className={styles.banner__image}>

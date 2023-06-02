@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import Link from 'next/link';
 import parse, {
   HTMLReactParserOptions, Element, domToReact, DOMNode,
 } from 'html-react-parser';
 import styles from '../Post.module.scss';
+import PostYouTube from './PostYouTube';
 
 type PostProps = {
   post: Post
@@ -18,8 +18,16 @@ interface ImgElement extends Element {
   attribs: Image,
 }
 
-const isImgElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
+interface IframeElement extends Element {
+  attribs: {
+    allow: string,
+    src: string,
+    title: string
+  }
+}
 
+const isImgElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
+const isIframeElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'iframe';
 const options: HTMLReactParserOptions = {
   replace: (domNode) => {
     // if (
@@ -55,11 +63,16 @@ const options: HTMLReactParserOptions = {
         </div>
       );
     }
+    if (isIframeElement(domNode)) {
+      const { attribs } = domNode as IframeElement;
+      return <PostYouTube src={attribs.src} allow={attribs.allow} title={attribs.title} />;
+    }
     return domNode;
   },
 };
 
 export default function Post({ post }: PostProps) {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { title, html, feature_image } = post;
   return (
     <div>
