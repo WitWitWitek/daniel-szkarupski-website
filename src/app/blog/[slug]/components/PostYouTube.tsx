@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Post.module.scss';
+import styles from './PostYouTube.module.scss';
 
 type Props = {
   src: string,

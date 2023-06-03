@@ -1,0 +1,37 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/buttons' as *;
+@use '../../../styles/headings' as *;
+@use '../../../styles/paddings' as *;
+@use '../../../styles/variables' as *;
+
+.post {
+    &__gallery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        &-figure {
+            display: block;
+            flex: 1 1 33%;
+            overflow: hidden;
+        }
+        &-image {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+    }
+}
+
+@include sm {
+    .post {
+        gap: 1rem;
+        &__gallery {
+            &-figure {
+                display: block;
+                flex: 1 1 25%;
+            }
+        }
+    }
+}

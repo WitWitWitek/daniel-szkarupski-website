@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { Element } from 'html-react-parser';
 
 export default function galleryHandler(element: Element, result: Element[]): void {

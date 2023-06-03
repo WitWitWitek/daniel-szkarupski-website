@@ -7,26 +7,18 @@ import parse, {
 import galleryHandler from '@/app/lib/galleryHandler';
 import styles from '../Post.module.scss';
 import PostYouTube from './PostYouTube';
+import PostGallery from './PostGallery';
 
 type PostProps = {
-  post: Post
+  post: PostType
 };
 
-type Image = {
-  src: string,
-  alt: string
-};
-
-interface ImgElement extends Element {
-  attribs: Image,
+export interface ImgElement extends Element {
+  attribs: ImageType,
 }
 
 interface IframeElement extends Element {
-  attribs: {
-    allow: string,
-    src: string,
-    title: string
-  }
+  attribs: IframeType,
 }
 
 const isImgElement = (domNode: DOMNode): boolean => domNode instanceof Element && domNode.name === 'figure' && domNode.attribs.class.includes('image-card');
@@ -37,13 +29,10 @@ const options: HTMLReactParserOptions = {
     if (isGalleryContainerElement(domNode)) {
       const { children } = domNode as Element;
       if (Array.isArray(children)) {
-        const result: Element[] = [];
-        galleryHandler(children[0] as unknown as Element, result);
-        console.log(result);
+        const result: ImgElement[] = [];
+        galleryHandler(children[0] as unknown as ImgElement, result);
+        return <PostGallery images={result} />;
       }
-      return (
-        <div />
-      );
     }
     if (isImgElement(domNode)) {
       const { children } = domNode as Element;

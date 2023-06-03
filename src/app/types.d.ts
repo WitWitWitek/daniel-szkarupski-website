@@ -6,8 +6,19 @@ interface PostItem {
   created_at: string,
 }
 
-interface Post extends PostItem {
+interface PostType extends PostItem {
   html: string,
   updated_at: string,
   published_at: string,
 }
+
+type ImageType = {
+  src: string,
+  alt: string
+};
+
+type IframeType = {
+  allow: string,
+  src: string,
+  title: string
+};
