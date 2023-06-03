@@ -26,7 +26,7 @@ export async function generateMetadata({ params: { slug } }: Params): Promise<Me
 }
 
 export default async function PostPage({ params: { slug } }: Params) {
-  const postData: Promise<Post | undefined> = getSinglePost(slug);
+  const postData: Promise<PostType | undefined> = getSinglePost(slug);
   const post = await postData;
 
   if (!post) {
