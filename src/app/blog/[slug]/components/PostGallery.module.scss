@@ -13,8 +13,12 @@
         gap: 0.5rem;
         &-figure {
             display: block;
-            flex: 1 1 33%;
+            flex: 1 1 32%;
             overflow: hidden;
+            position: relative;
+            display: grid;
+            align-items: center;
+            border: 1px solid rgba($gray, 0.5);
         }
         &-image {
             display: block;
@@ -29,7 +33,6 @@
         gap: 1rem;
         &__gallery {
             &-figure {
-                display: block;
                 flex: 1 1 25%;
             }
         }

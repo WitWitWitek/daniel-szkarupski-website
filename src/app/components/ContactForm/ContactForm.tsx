@@ -91,7 +91,7 @@ export default function ContactForm() {
           <textarea
             id="text"
             name="text"
-            maxLength={500}
+            maxLength={1000}
             onChange={onFormChange}
             value={formContent.text}
             className={styles['contact-form__textarea']}

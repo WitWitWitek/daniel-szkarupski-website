@@ -7,17 +7,20 @@
     $br-color: $white,
 ) {
     font-family: inherit;
-    padding: 0.6rem 1.1rem;
+    padding: 0.5rem 0.7rem;
     @include xs {
         padding: 0.75rem 1.5rem;
     }
-    border-radius: 0.5rem;
+    border-radius: $borderRadius;
     border: 2px solid $br-color;
     margin-right: 5px;
     cursor: pointer;
     color: $fcolor;
     background-color: $bgc;
     text-decoration: none;
+    display: grid;
+    text-align: center;
+    align-content: center;
     &:hover {
         background-color: $fcolor;
         color: $bgc;
@@ -33,11 +36,14 @@
 
 @mixin navbar-btn {
     font-family: inherit;
-    margin-right: 1rem;
     cursor: pointer;
     position: relative;
     color: $white;
     text-decoration: none;
+    font-size: inherit;
+    @include sm {
+        font-size: 18px;
+    }
     &::after {
         content: '';
         position: absolute;

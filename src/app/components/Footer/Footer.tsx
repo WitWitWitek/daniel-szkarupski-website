@@ -25,15 +25,15 @@ export default function Footer() {
         <div className={styles.footer__menu}>
           <div className={styles['footer__menu-container']}>
             <h3>Ważne linki</h3>
-            <a href="/konfederacja">konfederacja</a>
-            <a href="/ruch-narodowy">ruch narodowy</a>
+            <a href="https://konfederacja.pl/">Konfederacja</a>
+            <a href="https://ruch-narodowy.pl/">Ruch Narodowy</a>
           </div>
           <div className={styles['footer__menu-container']}>
             <h3>Mapa Strony</h3>
-            <a href="/konfederacja">O mnie</a>
-            <a href="/ruch-narodowy">Kontakt</a>
-            <a href="/ruch-narodowy">Blog</a>
-            <a href="/ruch-narodowy">Blog</a>
+            <a href="/#o-mnie">O mnie</a>
+            <Link href="/blog">Blog</Link>
+            <a href="/#social-media">Social Media</a>
+            <a href="/#kontakt">Kontakt</a>
           </div>
         </div>
       </div>
