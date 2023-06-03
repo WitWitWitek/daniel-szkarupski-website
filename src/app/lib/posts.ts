@@ -10,14 +10,14 @@ export const getPosts = async (): Promise<PostItem[]> => {
   return posts;
 };
 
-export const getSinglePost = async (slug: string): Promise<Post | undefined> => {
+export const getSinglePost = async (slug: string): Promise<PostType | undefined> => {
   const res = await fetch(
     `${process.env.GHOST_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${process.env.CONTENT_API_KEY}`,
     { next: { revalidate: 1 } },
   );
   const data = await res.json();
   if ('posts' in data) {
-    const { posts } = data as { posts: Post[] };
+    const { posts } = data as { posts: PostType[] };
     if (Array.isArray(posts)) {
       const [post] = posts;
       return post;
