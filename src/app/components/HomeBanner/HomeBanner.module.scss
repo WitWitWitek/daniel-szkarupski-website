@@ -77,7 +77,7 @@
             }
 
             p {
-                width: 100%;
+                max-width: 500px;
             }
         }
 
@@ -91,6 +91,16 @@
     }
 }
 
+@include xs {
+    .banner {
+        &__header {
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
 @include md {
     .banner {
         grid-template-columns: repeat(2, 1fr);
@@ -99,14 +109,14 @@
         background-position: bottom;
         background-size: 110%;
         &__header {
-            width: 65%;
+            width: 100%;
             grid-column: 1 / 2 ;
             & > :nth-child(n) {
                 margin-top: 1rem;
             }
     
             h1 {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 text-align: center;
                 line-height: 4rem;
             }

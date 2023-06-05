@@ -4,16 +4,20 @@
 @use '../../../styles/headings' as *;
 
 .person {
-    width: 15rem;
-    display: grid;
-    align-content: center;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     &__thumbnail {
         background-color: $white;
+        background-position: center;
+        background-size: cover;
         border-radius: 50%;
         height: 10rem;
         width: 10rem;
         box-shadow: 0px 0px 10px $red;
-        margin: auto;
     }
 
     &__position {
@@ -27,6 +31,7 @@
         text-align: center;
         font-weight: 700;
         letter-spacing: 0.25rem;
+        border-radius: $borderRadius;
     }
 
     &__name {
@@ -37,5 +42,20 @@
         text-align: center;
         font-weight: 700;
         letter-spacing: 0.25rem;
+        font-size: 1.3rem;
+    }
+}
+
+@include xs {
+    .person {
+        &__name {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include sm {
+    .person {
+        width: 20rem;
     }
 }

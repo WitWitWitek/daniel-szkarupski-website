@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 export const metadata: Metadata = {
   title: 'Daniel Szkarupski',
   description: 'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim',
+  keywords: 'Ruch Narodowy, Konfederacja, Patriotyzm, Województwo opolskie, Wybory do Sejmu i Senatu 2023',
 };
 
 export default function RootLayout({

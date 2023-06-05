@@ -21,6 +21,7 @@
     display: grid;
     text-align: center;
     align-content: center;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
     &:hover {
         background-color: $fcolor;
         color: $bgc;
@@ -44,6 +45,7 @@
     @include sm {
         font-size: 18px;
     }
+    margin-right: 0.75rem;
     &::after {
         content: '';
         position: absolute;
@@ -56,6 +58,7 @@
         transform: scaleX(0);
         transform-origin: center;
         transition: transform 0.3s;
+        border-radius: $borderRadius;
     }
     &:hover::after {
         opacity: 1;

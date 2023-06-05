@@ -22,3 +22,9 @@ type IframeType = {
   src: string,
   title: string
 };
+
+interface Person {
+  name: string,
+  position: string,
+  thumbnail: string,
+}

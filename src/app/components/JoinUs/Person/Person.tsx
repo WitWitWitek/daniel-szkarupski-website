@@ -1,14 +1,14 @@
 import styles from './Person.module.scss';
 
-export default function Person() {
+export default function Person({ teamMember }: { teamMember: Person }) {
   return (
     <div className={styles.person}>
-      <div className={styles.person__thumbnail} />
+      <div className={styles.person__thumbnail} style={{ backgroundImage: `url(${teamMember.thumbnail})` }} />
       <div className={styles.person__position}>
-        Position
+        {teamMember.position}
       </div>
       <div className={styles.person__name}>
-        Name NameNameName
+        {teamMember.name}
       </div>
     </div>
   );

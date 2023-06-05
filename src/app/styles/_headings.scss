@@ -19,6 +19,7 @@
         background-color: $red;
         opacity: 1;
         margin: 0.5rem auto;
+        border-radius: $borderRadius;
     }
     @include xs {
         font-size: 2rem;
