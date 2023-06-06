@@ -2,6 +2,11 @@ import styles from './JoinUs.module.scss';
 import Person from './Person/Person';
 
 const teamArray: Person[] = [{
+  name: 'Bartłomiej Czuchnowski',
+  position: 'Rzecznik prasowy komitetu, koordynator rady programowej',
+  thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
+},
+{
   name: 'Dawid Gaczyński',
   position: 'Szef sztabu wyborczego',
   thumbnail: '/team/dawid-gaczynski.jpg',
@@ -12,18 +17,13 @@ const teamArray: Person[] = [{
   thumbnail: '/team/bartlomiej-lach.jpg',
 },
 {
-  name: 'Bartłomiej Czuchnowski',
-  position: 'Rzecznik prasowy komitetu, koordynator rady programowej',
-  thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
-},
-{
   name: 'Karsten Glensk',
   position: 'Specialista ds. marketingu',
   thumbnail: '/team/karsten-glensk.jpg',
 },
 {
   name: 'Kacper Lachowicz',
-  position: 'Koordynator działu logistyznego',
+  position: 'Koordynator działu logistycznego',
   thumbnail: '/team/kacper-lachowicz.jpeg',
 },
 {

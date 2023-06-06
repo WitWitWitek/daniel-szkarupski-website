@@ -5,7 +5,7 @@
 
 .person {
     width: 100%;
-    height: 350px;
+    max-height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,17 +21,24 @@
     }
 
     &__position {
-        display: block;
-        background-color: $red;
+        display: inline;
         color: $white;
-        margin: 0.75rem 0;
         font-family: inherit;
         text-transform: uppercase;
         padding: 0.25rem;
         text-align: center;
         font-weight: 700;
         letter-spacing: 0.25rem;
-        border-radius: $borderRadius;
+        border-radius: $borderRadius; 
+        line-height: 2rem;
+        text-align: center;
+        span {
+            display: inline;
+            padding: 0.25em 0;
+            background: $red;
+            color: $white;
+            box-shadow: .1em 0 0 $red, -.1em 0 0 $red;
+        }
     }
 
     &__name {
@@ -43,19 +50,22 @@
         font-weight: 700;
         letter-spacing: 0.25rem;
         font-size: 1.3rem;
+        margin: 0.5rem auto;
     }
 }
 
 @include xs {
     .person {
         &__name {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 }
 
 @include sm {
     .person {
+        height: 420px;
+        max-height: unset;
         width: 20rem;
     }
 }
