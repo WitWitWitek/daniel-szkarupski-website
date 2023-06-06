@@ -16,9 +16,13 @@
         text-indent: 2rem;
         p {
             margin: 0.5rem 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: 30px;
+            word-wrap: break-word;
         }
 
-        span {
+        strong {
             color: $red;
             font-weight: bold;
         }
