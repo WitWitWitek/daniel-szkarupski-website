@@ -1,9 +1,9 @@
+import transporter from '@/app/lib/nodemailer';
 import DOMPurify from 'isomorphic-dompurify';
 import { NextResponse } from 'next/server';
-import transporter from '../../lib/nodemailer';
 
 // eslint-disable-next-line import/prefer-default-export
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<NextResponse> {
   const {
     name, email, subject, text,
   } = await req.json();

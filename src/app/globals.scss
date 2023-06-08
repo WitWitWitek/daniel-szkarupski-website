@@ -1,8 +1,4 @@
-@use './styles/variables' as *;
-@use './styles/breakpoints' as *;
-@use './styles/paddings' as *;
-@use './styles/buttons' as *;
-@use './styles/paddings' as *;
+@use './styles/index' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
 * {

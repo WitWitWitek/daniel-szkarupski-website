@@ -1,6 +1,7 @@
-import nodemailer from 'nodemailer';
+import nodemailer, { Transporter } from 'nodemailer';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
-const transporter = nodemailer.createTransport({
+const transporter: Transporter<SMTPTransport.SentMessageInfo> = nodemailer.createTransport({
   host: process.env.EMAIL_IP,
   port: 465,
   secure: true,

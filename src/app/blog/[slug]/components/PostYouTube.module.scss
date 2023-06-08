@@ -1,8 +1,4 @@
-@use '../../../styles/breakpoints' as *;
-@use '../../../styles/buttons' as *;
-@use '../../../styles/headings' as *;
-@use '../../../styles/paddings' as *;
-@use '../../../styles/variables' as *;
+@use '../../../styles/index' as *;
 
 .post {
     &__youtube {
