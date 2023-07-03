@@ -8,198 +8,33 @@
 
 
 <url>
-  <loc>https://opolska-ak.pl/</loc>
-  <lastmod>2022-09-29T19:09:21+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://opolska-ak.pl/o-projekcie</loc>
-  <lastmod>2022-09-29T19:09:21+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/blog</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://opolska-ak.pl/tablice</loc>
-  <lastmod>2022-09-29T19:09:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio</loc>
-  <lastmod>2022-09-29T19:09:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/aktualnosci</loc>
-  <lastmod>2022-09-29T19:09:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/kontakt</loc>
-  <lastmod>2022-09-29T19:09:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/antypolska-polityka</loc>
-  <lastmod>2022-09-29T19:09:33+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/blog/liga-mistrzow-uefa</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://opolska-ak.pl/tablice/terror-hitlerowski</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/blog/nullam-ut-gravida-dui-non-suscipit-massa</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://opolska-ak.pl/tablice/armia-krajowa</loc>
-  <lastmod>2022-09-29T19:09:33+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/blog/there-is-no-one-who-loves-pain-itself</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://opolska-ak.pl/tablice/okreg-slaski-ak</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/slask-opolski-w-walce-z-nazizmem</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/inspektorat-skorpion</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/zolnierze-opolskiej-ak-cz-1</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/zolnierze-opolskiej-ak-cz-2</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/kobiety-skorpiona-i-zyrafy</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/dzialalnosc-wywiadowcza</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/dywersja-i-sabotaz</loc>
-  <lastmod>2022-09-29T19:09:33+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/prasa-konspiracyjna</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/inne-struktury</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/opolanie-w-walce</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/tablice/zakonczenie-wojny</loc>
-  <lastmod>2022-09-29T19:09:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/antypolska-polityka-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/terror-hitlerowski-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/armia-krajowa-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/okreg-slaski-ak-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/slask-opolski-w-walce-z-nazizmem-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/inspektorat-skorpion-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/zolnierze-opolskiej-ak-cz-1-audio</loc>
-  <lastmod>2022-09-29T19:09:29+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/zolnierze-opolskiej-ak-cz-2-audio</loc>
-  <lastmod>2022-09-29T19:09:29+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/kobiety-skorpiona-i-zyrafy-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/dzialalnosc-wywiadowcza-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/dywersja-i-sabotaz-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/prasa-konspiracyjna-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/inne-struktury-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/opolanie-w-walce-audio</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/audio/zakonczenie-wojny-audio</loc>
-  <lastmod>2022-09-29T19:09:29+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/aktualnosci/spotkanie-z-prof-f-markiem-w-chrzastowicach</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/aktualnosci/pierwsze-spotkania-w-chrzastowicach-za-nami</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://opolska-ak.pl/aktualnosci/nieznana-historia-ak-w-chrzastowicach</loc>
-  <lastmod>2022-09-29T19:09:28+00:00</lastmod>
+  <loc>https://daniel-szkarupski.pl/blog/coming-soon</loc>
+  <lastmod>2023-06-18T05:13:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
