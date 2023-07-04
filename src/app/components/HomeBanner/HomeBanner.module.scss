@@ -1,132 +1,125 @@
 @use '../../styles/index' as *;
 
 .banner {
-    background-color: $mainBlue;
+  background-color: $mainBlue;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10px;
+  @include section-padding;
+  padding-top: $paddingSectionTop;
+  color: $white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 55% 45%;
+  justify-items: center;
+  background-image: url('/wave-background.svg');
+  background-size: 300%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1 {
+      font-weight: 700;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__btn-container {
     width: 100%;
-    height: 100vh;
-    padding: 0 10px;
-    @include section-padding;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__support-btn {
+    @include btn-cta($white, $red);
+  }
+
+  &__join-btn {
+    @include btn-cta;
+  }
+
+  &__image {
+    grid-row: 1 / 2;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    align-self: end;
+  }
+}
+
+@include xs {
+  .banner {
+    grid-template-rows: 45% 55%;
+    background-size: 200%;
+    background-position: bottom;
     padding-top: $paddingSectionTop;
-    color: $white;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 55% 45%;
-    justify-items: center;
-    background-image: url('/wave-background.svg');
-    background-size: 300%;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-
     &__header {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        h1 {
-            font-weight: 700;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 3.5px;
-            text-align: center;
-        }
+      justify-content: flex-start;
+      gap: 1rem;
+      h1 {
+        font-size: 2.5rem;
+      }
 
-        p {
-            text-align: center;
-            width: 100%;
-        }
-    }
-
-    &__btn-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    &__support-btn {
-        @include btn-cta($white, $red);
-    }
-
-    &__join-btn {
-        @include btn-cta;
+      p {
+        font-size: 1.7rem;
+        max-width: 500px;
+      }
     }
 
     &__image {
-        grid-row: 1 / 2;
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        position: relative;
-        align-self: end;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-height: 90%;
+      max-width: 250px;
+      align-self: flex-end;
     }
-}
-
-@include xs {
-    .banner {
-        grid-template-rows: 45% 55%;
-        background-size: 200%;
-        background-position: bottom;
-        padding-top: $paddingSectionTop;
-        &__header {
-            justify-content: flex-start;
-            gap: 1rem;
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            p {
-                max-width: 500px;
-            }
-        }
-
-        &__image {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            max-height: 90%;
-            max-width: 250px;
-            align-self: flex-end;
-        } 
-    }
-}
-
-@include xs {
-    .banner {
-        &__header {
-            p {
-                font-size: 1.3rem;
-            }
-        }
-    }
+  }
 }
 
 @include md {
-    .banner {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        align-items: center;
-        background-position: bottom;
-        background-size: 110%;
-        &__header {
-            width: 100%;
-            grid-column: 1 / 2 ;
-            & > :nth-child(n) {
-                margin-top: 1rem;
-            }
-    
-            h1 {
-                font-size: 3.5rem;
-                text-align: center;
-                line-height: 4rem;
-            }
+  .banner {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-position: bottom;
+    background-size: 110%;
+    &__header {
+      width: 100%;
+      grid-column: 1 / 2;
+      & > :nth-child(n) {
+        margin-top: 1rem;
+      }
 
-            p {
-                font-size: 1.6rem;
-            }
-        }
+      h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 4rem;
+      }
 
-        &__image {
-            grid-column: 2 / 3 ;
-            align-self: unset;
-            max-width: 550px;
-        } 
+      p {
+        font-size: 2rem;
+      }
     }
+
+    &__image {
+      grid-column: 2 / 3;
+      align-self: unset;
+      max-width: 550px;
+    }
+  }
 }
