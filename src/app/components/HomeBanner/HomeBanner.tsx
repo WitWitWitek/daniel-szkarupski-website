@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FaShieldAlt, FaPuzzlePiece, FaUserCheck } from 'react-icons/fa';
 import styles from './HomeBanner.module.scss';
 
 const container = {
@@ -27,7 +28,17 @@ export default function HomeBanner() {
           Daniel
           <br /> Szkarupski
         </motion.h1>
-        <motion.p variants={child}>Bezpieczeństwo, Skuteczność, Tożsamość.</motion.p>
+        <motion.div variants={child} className={styles['banner__paragraphs-container']}>
+          <p>
+            <FaShieldAlt /> Bezpieczeństwo
+          </p>
+          <p>
+            <FaUserCheck /> Skuteczność
+          </p>
+          <p>
+            <FaPuzzlePiece /> Tożsamość
+          </p>
+        </motion.div>
         <motion.div variants={child} className={styles['banner__btn-container']}>
           <a href="https://wesprzyjrn.pl/" className={styles['banner__support-btn']}>
             Wesprzyj

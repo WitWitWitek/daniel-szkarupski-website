@@ -46,7 +46,7 @@ export default function Person({ teamMember }: { teamMember: Person }) {
       />
       <motion.div variants={childVariants} className={styles.person__name}>
         {teamMember.name.split(' ').map((el) => (
-          <p>{el}</p>
+          <p key={teamMember.position + Math.random()}>{el}</p>
         ))}
       </motion.div>
       <motion.div variants={childVariants} className={styles.person__position}>

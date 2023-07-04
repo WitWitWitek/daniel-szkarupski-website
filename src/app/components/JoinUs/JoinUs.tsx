@@ -53,7 +53,7 @@ export default function JoinUs() {
       </h2>
       <div className={styles['join-us__wrapper']}>
         {teamArray.map((person) => (
-          <Person key={person.name + Math.random()} teamMember={person} />
+          <Person key={person.position} teamMember={person} />
         ))}
       </div>
     </section>

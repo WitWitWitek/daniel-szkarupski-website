@@ -10,8 +10,8 @@ export default function Footer() {
         <div className={styles['footer__user-container']}>
           <h2 className={styles['footer__user-title']}>Daniel Szkarupski</h2>
           <p className={styles['footer__user-description']}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Autem labore id et quae dolores amet.
+            Zachęcam do śledzenia moich profili na mediach społecznościowych. Znajdziecie tam Państwo najświeższe
+            informacje dotyczące mojej działalności.
           </p>
           <div className={styles['footer__social-media']}>
             <Link href="https://www.facebook.com/szkarupski/" className={styles['footer__social-media-link']}>

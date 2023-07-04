@@ -1,158 +1,157 @@
 @use '../../styles/index' as *;
 
 .navbar {
-    background-color: $mainBlue;
+  background-color: $mainBlue;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $paddingSectionTop;
+  @include nav-padding;
+
+  &__link {
+    @include navbar-btn;
+  }
+
+  &__logo {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    @include navbar-btn;
+
+    &-container {
+      position: relative;
+      width: 50px;
+      height: 40px;
+    }
+
+    &-text {
+      font-family: inherit;
+      font-weight: 700;
+      line-height: 1.1rem;
+      margin-left: -7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__burger-btn {
+    border: none;
+    background-color: transparent;
+    margin-right: 0.5rem;
+    z-index: 4;
+  }
+
+  &__support-btn {
+    @include btn-cta($white, $red);
+  }
+
+  &__join-btn {
+    @include btn-cta;
+  }
+
+  &__wrapper {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1rem;
+    &-cta {
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-color: $white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+
+    &-link {
+      @include navbar-btn;
+      margin: 0;
+      display: block;
+      color: $mainBlue;
+      z-index: 3;
+      font-size: 1.8rem;
+    }
+
+    &-active {
+      transform: translateX(0%);
+    }
+  }
+
+  &__backdrop {
     position: fixed;
     inset: 0;
-    z-index: 2;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: $paddingSectionTop;
-    @include nav-padding;
-
-    
-    &__link {
-        @include navbar-btn;
+    background-color: rgba(black, $alpha: 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    &-active {
+      visibility: visible;
+      opacity: 1;
     }
-    
-    &__logo {
-        margin-left: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        z-index: 1;
-        @include navbar-btn;
-
-        &-container {
-            position: relative;
-            width: 50px;
-            height: 40px;
-        }
-
-        &-text {
-            font-family: inherit;
-            font-weight: 700;
-            line-height: 1.1rem;
-            margin-left: -7px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    &__burger-btn {
-        border: none;
-        background-color: transparent;
-        margin-right: 0.5rem;
-        z-index: 4;
-    }
-
-    &__support-btn {
-        @include btn-cta($white, $red);
-    }
-    
-    &__join-btn {
-        @include btn-cta;
-    }
-    
-    &__wrapper {
-        display: none;
-    }
-
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        margin-right: 1rem;
-        &-cta {
-            display: flex;
-        }
-    }
-
-    &__menu {
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: $white;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-        transform: translateX(100%);
-        transition: all 0.3s ease-in-out;
-
-        &-link {
-            @include navbar-btn;
-            margin: 0;
-            display: block;
-            color: $mainBlue;
-            z-index: 3;
-            font-size: 1.8rem;
-        }
-
-        &-active {
-            transform: translateX(0%);
-        }
-    }
-
-    &__backdrop {
-        position: fixed;
-        inset: 0;
-        background-color: rgba(black, $alpha: .5);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
-        &-active {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
+  }
 }
 
-
 @include xs {
-    .navbar {
-        &__menu {
-            width: 75%;
-    
-            &-link {
-                font-size: 2.0rem;
-            }
-        }
+  .navbar {
+    &__menu {
+      width: 75%;
+
+      &-link {
+        font-size: 2rem;
+      }
     }
+  }
 }
 
 @include sm {
-    .navbar {
-        &__menu {
-            width: 50%;
-    
-            &-link {
-                font-size: 2.0rem;
-            }
-        }
+  .navbar {
+    &__menu {
+      width: 50%;
+
+      &-link {
+        font-size: 2rem;
+      }
     }
+  }
 }
 
-
 @include md {
-    .navbar {
-        &__burger-btn {
-            display: none;
-        }
-
-        &__wrapper {
-            display: flex;
-        }
-
-        &__menu {
-            display: none;
-        }
+  .navbar {
+    &__burger-btn {
+      display: none;
     }
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
 }
