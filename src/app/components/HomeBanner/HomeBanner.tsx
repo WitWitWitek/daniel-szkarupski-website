@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 import { FaShieldAlt, FaPuzzlePiece, FaUserCheck } from 'react-icons/fa';
 import styles from './HomeBanner.module.scss';
 
@@ -17,6 +17,13 @@ const child = {
     opacity: [0, 1],
     y: [20, 0],
     transition: { duration: 0.8 },
+  },
+};
+
+const homeImage: Variants = {
+  whileInView: {
+    opacity: [0, 1],
+    transition: { duration: 1 },
   },
 };
 
@@ -48,9 +55,9 @@ export default function HomeBanner() {
           </a>
         </motion.div>
       </motion.div>
-      <div className={styles.banner__image}>
+      <motion.div variants={homeImage} animate="whileInView" className={styles.banner__image}>
         <Image src="/daniel-cover.png" alt="Daniel Szkarupski zdjęcie promocyjne" fill />
-      </div>
+      </motion.div>
     </section>
   );
 }
