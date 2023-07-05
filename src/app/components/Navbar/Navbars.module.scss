@@ -61,11 +61,22 @@
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     margin-right: 1rem;
-    &-cta {
+    &--links {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      flex-shrink: 1;
+    }
+    &--btns {
+      flex-shrink: 0;
+      flex-grow: 1;
       a {
         display: inline-block;
       }

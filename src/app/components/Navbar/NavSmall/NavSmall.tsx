@@ -18,12 +18,30 @@ export default function NavSmall() {
         onClick={() => setMenuOpen(false)}
       />
       <div className={`${styles.navbar__menu} ${isMenuOpen ? styles['navbar__menu-active'] : ''}`}>
-        <a href="/#o-mnie" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>O mnie</a>
-        <Link href="/blog" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>Blog</Link>
-        <a href="/#social-media" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>Social Media</a>
-        <a href="/#kontakt" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>Kontakt</a>
-        <a href="/#dolacz-do-nas" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>Dołącz do nas</a>
-        <a href="https://wesprzyjrn.pl/" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>Wesprzyj</a>
+        <a href="/#o-mnie" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
+          O mnie
+        </a>
+        <Link href="/blog" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
+          Blog
+        </Link>
+        <a href="/#social-media" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
+          Social Media
+        </a>
+        <a href="/#kontakt" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
+          Kontakt
+        </a>
+        <a href="/#dolacz-do-nas" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
+          Dołącz do nas
+        </a>
+        <a
+          href="https://wesprzyjrn.pl/"
+          className={styles['navbar__menu-link']}
+          onClick={() => setMenuOpen(false)}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Wesprzyj
+        </a>
       </div>
     </>
   );
