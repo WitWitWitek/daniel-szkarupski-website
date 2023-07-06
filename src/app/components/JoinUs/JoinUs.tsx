@@ -4,17 +4,20 @@ import Person from './Person/Person';
 const teamArray: Person[] = [
   {
     name: 'Bartłomiej Czuchnowski',
-    position: 'Rzecznik prasowy komitetu, koordynator rady programowej',
+    // position: 'Rzecznik prasowy komitetu, koordynator rady programowej',
+    position: 'Rzecznik prasowy koła Opole, koordynator rady programowej',
     thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
   },
   {
     name: 'Dawid Gaczyński',
-    position: 'Szef sztabu wyborczego',
+    // position: 'Szef sztabu wyborczego',
+    position: 'Sekretarz koła Opole Ruchu Narodowego',
     thumbnail: '/team/dawid-gaczynski.jpg',
   },
   {
     name: 'Bartłomiej Lach',
-    position: 'Zastępca szefa sztabu wyborczego, pełnomocnik ds. finansowych',
+    // position: 'Zastępca szefa sztabu wyborczego, pełnomocnik ds. finansowych',
+    position: 'Pełnomocnik ds. finansowych',
     thumbnail: '/team/bartlomiej-lach.jpg',
   },
   {

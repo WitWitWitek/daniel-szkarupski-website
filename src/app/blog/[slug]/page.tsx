@@ -6,8 +6,8 @@ import Post from './components/Post';
 
 type Params = {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 };
 
 export async function generateMetadata({ params: { slug } }: Params): Promise<Metadata> {
@@ -20,7 +20,7 @@ export async function generateMetadata({ params: { slug } }: Params): Promise<Me
   }
 
   return {
-    title: `${post.title} | Daniel Szkarupski`,
+    title: `${post.title} | Daniel Szkarupski - Ruch Narodowy & Konfederacja`,
     description: post.excerpt,
   };
 }

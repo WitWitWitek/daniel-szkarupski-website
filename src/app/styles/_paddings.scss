@@ -2,33 +2,37 @@
 @use './variables' as *;
 
 @mixin section-padding {
-    padding: 1rem;
+  padding: 1rem;
+  padding-top: $paddingSectionTop;
 
-    @include xs {
-        padding: 1rem 10%;
-    }
+  @include xs {
+    padding: 1rem 10%;
+    padding-top: $paddingSectionTop;
+  }
 
-    @include sm {
-        padding: 1rem 12.5%;
-    }
+  @include sm {
+    padding: 1rem 12.5%;
+    padding-top: $paddingSectionTop;
+  }
 
-    @include md {
-        padding: 1rem 15%;
-    }
+  @include md {
+    padding: 1rem 15%;
+    padding-top: $paddingSectionTop;
+  }
 }
 
 @mixin nav-padding {
-    padding: 0 1rem;
+  padding: 0 1rem;
 
-    @include xs {
-        padding: 0 10%;
-    }
+  @include xs {
+    padding: 0 10%;
+  }
 
-    @include sm {
-        padding: 0 12.5%;
-    }
+  @include sm {
+    padding: 0 12.5%;
+  }
 
-    @include md {
-        padding: 0 15%;
-    }
+  @include md {
+    padding: 0 15%;
+  }
 }

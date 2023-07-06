@@ -1,12 +1,6 @@
-const dateHandler = (date: string): string => {
-  const dateToRefactor = new Date(date);
-  return dateToRefactor.toLocaleDateString('pl-PL', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-  });
+export const dateHandler = (publicationDate: string) => {
+  const dateObj = new Date(publicationDate);
+  return Intl.DateTimeFormat('pl-PL', { dateStyle: 'full', timeStyle: 'short' }).format(dateObj);
 };
 
 export default dateHandler;

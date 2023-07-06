@@ -4,19 +4,20 @@ import styles from './BlogPage.module.scss';
 import PostListItem from './components/PostListItem';
 
 export const metadata: Metadata = {
-  title: 'Blog | Daniel Szkarupski',
+  title: 'Blog | Daniel Szkarupski - Ruch Narodowy & Konfederacja',
   description: 'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim',
 };
 
 export default async function BlogPage() {
   const postsData: Promise<PostItem[]> = getPosts();
   const posts = await postsData;
-
   return (
     <>
       <h1 className={styles['blog-page__title']}>Blog:</h1>
       <ul className={styles['blog-page__list']}>
-        {posts.map((post) => <PostListItem key={post.slug} postItem={post} />)}
+        {posts.map((post) => (
+          <PostListItem key={post.slug} postItem={post} />
+        ))}
       </ul>
     </>
   );

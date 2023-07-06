@@ -5,11 +5,15 @@ import './globals.scss';
 import Footer from './components/Footer/Footer';
 
 export const metadata: Metadata = {
-  title: 'Daniel Szkarupski',
+  title: 'Daniel Szkarupski - Ruch Narodowy & Konfederacja',
+  // description:
+  //   'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL). Wielkie zjednoczenie środowisk wolnościowych, narodowych, patriotycznych i konserwatywnych - Szkarupski, Korwin, Winnicki, Braun, Kulesza, Bosak, Berkowicz, Tumanowicz, Mentzen.',
   description:
-    'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL). Wielkie zjednoczenie środowisk wolnościowych, narodowych, patriotycznych i konserwatywnych - Szkarupski, Korwin, Winnicki, Braun, Kulesza, Bosak, Berkowicz, Tumanowicz, Mentzen.',
+    'Opolski działacz narodowy, członek Młodzieży Wszechpolskiej i Ruchu Narodowego. Pasjonat fotografii. Absolwente Uniwersytetu Opolskiego na kierunku Filologia Angielska oraz studiów Geopolityka i Geostrategia.',
+  // keywords:
+  //   'Ruch Narodowy, Konfederacja, Patriotyzm, Województwo opolskie, Wybory do Sejmu i Senatu 2023, Konfederacja w wojewódzctwie opolskim, Ruch Narodowy w wojewódzctwie opolskim',
   keywords:
-    'Ruch Narodowy, Konfederacja, Patriotyzm, Województwo opolskie, Wybory do Sejmu i Senatu 2023, Konfederacja w wojewódzctwie opolskim, Ruch Narodowy w wojewódzctwie opolskim',
+    'Ruch Narodowy, Konfederacja, Patriotyzm, Województwo opolskie, Konfederacja w wojewódzctwie opolskim, Ruch Narodowy w wojewódzctwie opolskim',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
