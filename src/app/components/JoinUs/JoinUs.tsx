@@ -3,15 +3,18 @@ import Person from './Person/Person';
 
 const teamArray: Person[] = [
   {
+    name: 'Daniel Szkarupski',
+    position: 'Kandydat w wyborach do Sejmu RP',
+    thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
+  },
+  {
     name: 'Bartłomiej Czuchnowski',
-    // position: 'Rzecznik prasowy komitetu, koordynator rady programowej',
-    position: 'Rzecznik prasowy koła Opole, koordynator rady programowej',
+    position: 'Rzecznik prasowy komitetu, koordynator Rady Programowej',
     thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
   },
   {
     name: 'Dawid Gaczyński',
-    // position: 'Szef sztabu wyborczego',
-    position: 'Sekretarz koła Opole Ruchu Narodowego',
+    position: 'Szef sztabu wyborczego',
     thumbnail: '/team/dawid-gaczynski.jpg',
   },
   {
@@ -36,13 +39,8 @@ const teamArray: Person[] = [
     thumbnail: '/team/lukasz-halaszkiewicz.jpg',
   },
   {
-    name: 'Romuald Kałwa',
-    position: 'Specialista ds. kontaktu z mediami',
-    thumbnail: '/team/romuald-kalwa.jpg',
-  },
-  {
     name: 'Łukasz Pukas',
-    position: 'Koordynator zespołu graficznego',
+    position: 'Koordynator zespołu filmowego',
     thumbnail: '/team/lukasz-pukas.jpg',
   },
 ];

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { FormContent } from '../components/ContactForm/ContactForm';
+import type { FormContent } from '../components/Contact/ContactForm/ContactForm';
 
 const useContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
