@@ -7,7 +7,7 @@
     p {
       margin: 0.5rem 0;
       font-family: inherit;
-      font-size: inherit;
+      @include fontSize;
       line-height: 30px;
       word-wrap: break-word;
     }
@@ -28,7 +28,6 @@
       gap: 1rem;
       p {
         flex: 1 1 300px;
-        font-size: 18px;
       }
     }
   }

@@ -1,3 +1,5 @@
+@use './breakpoints' as *;
+
 $white: #ffffff;
 $red: #c90a15;
 $mainBlue: #0f2947;
@@ -5,5 +7,11 @@ $gray: gray;
 $paddingSectionTop: 70px;
 
 $fontFamily: 'Montserrat', sans-serif;
-$fontSize: 16px;
 $borderRadius: 10px;
+
+@mixin fontSize {
+  font-size: 16px;
+  @include sm {
+    font-size: 18px;
+  }
+}

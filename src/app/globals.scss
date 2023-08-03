@@ -9,10 +9,10 @@
 
 :root {
   font-family: $fontFamily;
-  font-size: $fontSize;
+  @include fontSize;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-} 
+}
 
 body {
   background-color: $white;

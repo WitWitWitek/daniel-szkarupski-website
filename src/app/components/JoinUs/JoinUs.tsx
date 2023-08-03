@@ -6,7 +6,7 @@ const teamArray: Person[] = [
   {
     name: 'Daniel Szkarupski',
     position: 'Kandydat w wyborach do Sejmu RP',
-    thumbnail: '/team/bartlomiej-czuchnowski.jpeg',
+    thumbnail: '/team/daniel-szkarupski.png',
   },
   {
     name: 'Bartłomiej Czuchnowski',
@@ -20,7 +20,6 @@ const teamArray: Person[] = [
   },
   {
     name: 'Bartłomiej Lach',
-    // position: 'Zastępca szefa sztabu wyborczego, pełnomocnik ds. finansowych',
     position: 'Pełnomocnik ds. finansowych',
     thumbnail: '/team/bartlomiej-lach.jpg',
   },

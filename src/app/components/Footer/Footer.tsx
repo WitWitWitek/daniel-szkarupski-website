@@ -16,16 +16,28 @@ export default function Footer() {
             informacje dotyczące mojej działalności.
           </p>
           <div className={styles['footer__social-media']}>
-            <Link href="https://www.facebook.com/szkarupski/" className={styles['footer__social-media-link']}>
+            <Link
+              href="https://www.facebook.com/szkarupski/"
+              className={styles['footer__social-media-link']}
+              title="Facebook"
+            >
               <FacebookIcon />
             </Link>
-            <Link href="https://twitter.com/szkarupski" className={styles['footer__social-media-link']}>
+            <Link href="https://twitter.com/szkarupski" className={styles['footer__social-media-link']} title="Twitter">
               <TwitterIcon />
             </Link>
-            <Link href="https://www.instagram.com/szkarupski_daniel/" className={styles['footer__social-media-link']}>
+            <Link
+              href="https://www.instagram.com/szkarupski_daniel/"
+              className={styles['footer__social-media-link']}
+              title="Instagram"
+            >
               <InstagramIcon />
             </Link>
-            <Link href="https://www.tiktok.com/@daniel.szkarupski" className={styles['footer__social-media-link']}>
+            <Link
+              href="https://www.tiktok.com/@daniel.szkarupski"
+              className={styles['footer__social-media-link']}
+              title="TikTok"
+            >
               <TikTokIcon />
             </Link>
           </div>

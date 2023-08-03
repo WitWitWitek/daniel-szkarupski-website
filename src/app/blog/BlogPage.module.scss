@@ -42,7 +42,7 @@
       display: grid;
       align-content: center;
       text-decoration: none;
-      font-size: 1rem;
+      @include fontSize;
       font-weight: 700;
       padding: 1rem;
       &:hover {
@@ -79,11 +79,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
       color: $gray;
       text-align: center;
       padding: 0.5rem;
       font-style: italic;
+      margin: 0.5rem auto;
       svg {
         margin-right: 0.25rem;
       }
