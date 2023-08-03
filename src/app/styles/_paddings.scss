@@ -3,21 +3,17 @@
 
 @mixin section-padding {
   padding: 1rem;
-  padding-top: $paddingSectionTop;
 
   @include xs {
     padding: 1rem 10%;
-    padding-top: $paddingSectionTop;
   }
 
   @include sm {
     padding: 1rem 12.5%;
-    padding-top: $paddingSectionTop;
   }
 
   @include md {
     padding: 1rem 15%;
-    padding-top: $paddingSectionTop;
   }
 }
 

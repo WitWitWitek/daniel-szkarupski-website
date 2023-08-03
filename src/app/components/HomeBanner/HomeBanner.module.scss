@@ -3,10 +3,9 @@
 .banner {
   background-color: $mainBlue;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - $paddingSectionTop);
   padding: 0 10px;
   @include section-padding;
-  padding-top: $paddingSectionTop;
   color: $white;
   display: grid;
   grid-template-columns: 1fr;
