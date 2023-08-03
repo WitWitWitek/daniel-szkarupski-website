@@ -1,0 +1,20 @@
+@use '../../styles/index' as *;
+
+.section-wrapper {
+  width: 100%;
+  @include section-padding;
+}
+
+.section-blue {
+  background-color: $mainBlue;
+  h2 {
+    @include section-heading($white);
+  }
+}
+
+.section-white {
+  background-color: $white;
+  h2 {
+    @include section-heading($mainBlue);
+  }
+}

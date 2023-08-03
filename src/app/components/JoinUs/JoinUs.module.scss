@@ -1,29 +1,21 @@
 @use '../../styles/index' as *;
 
 .join-us {
+  &__wrapper {
     width: 100%;
-    background-color: $mainBlue;
-    @include section-padding;
-    h2 {
-        @include section-heading($white);
-    }
-
-    &__wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin: 2rem auto;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+  }
 }
 
 @include sm {
-    .join-us {
-        &__wrapper {
-            gap: 1rem;
-        }
+  .join-us {
+    &__wrapper {
+      gap: 1rem;
     }
-    
+  }
 }

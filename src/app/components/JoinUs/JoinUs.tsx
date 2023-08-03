@@ -1,3 +1,4 @@
+import HomeSectionLayout from '../HomeSectionLayout/HomeSectionLayout';
 import styles from './JoinUs.module.scss';
 import Person from './Person/Person';
 
@@ -47,16 +48,12 @@ const teamArray: Person[] = [
 
 export default function JoinUs() {
   return (
-    <section className={styles['join-us']}>
-      <h2 id="dolacz-do-nas">
-        Dołącz
-        <br /> do nas!
-      </h2>
+    <HomeSectionLayout headingTitle="Dołącz do nas!" sectionId="dolacz-do-nas" mode="blue">
       <div className={styles['join-us__wrapper']}>
         {teamArray.map((person) => (
           <Person key={person.position} teamMember={person} />
         ))}
       </div>
-    </section>
+    </HomeSectionLayout>
   );
 }

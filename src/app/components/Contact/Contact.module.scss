@@ -1,14 +1,6 @@
 @use '../../styles/index' as *;
 
 .contact-form {
-  background-color: $white;
-  width: 100%;
-  @include section-padding;
-
-  &__heading {
-    @include section-heading;
-  }
-
   &__description {
     margin: 0.5rem 0;
     font-family: inherit;

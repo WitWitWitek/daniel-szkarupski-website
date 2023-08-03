@@ -1,11 +1,11 @@
 import FacebookIcon from '@/app/assets/icons/facebook';
 import TwitterIcon from '@/app/assets/icons/twitter';
 import styles from './SocialMedia.module.scss';
+import HomeSectionLayout from '../HomeSectionLayout/HomeSectionLayout';
 
 export default function SocialMedia() {
   return (
-    <section className={styles['social-media']}>
-      <h2 id="social-media">Social media</h2>
+    <HomeSectionLayout headingTitle="Social media" sectionId="social-media" mode="blue">
       <div className={styles['social-media__container']}>
         <div className={styles['social-media__wrapper']}>
           <div className={`${styles['social-media__icon']} ${styles['social-media__icon-facebook']}`}>
@@ -22,15 +22,8 @@ export default function SocialMedia() {
               data-show-facepile="true"
               data-width="500"
             >
-              <blockquote
-                cite="https://www.facebook.com/szkarupski"
-                className="fb-xfbml-parse-ignore"
-              >
-                <a
-                  href="https://www.facebook.com/szkarupski"
-                >
-                  Daniel Szkarupski - Ruch Narodowy/Konfederacja.
-                </a>
+              <blockquote cite="https://www.facebook.com/szkarupski" className="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/szkarupski">Daniel Szkarupski - Ruch Narodowy/Konfederacja.</a>
               </blockquote>
             </div>
           </div>
@@ -40,15 +33,12 @@ export default function SocialMedia() {
             <TwitterIcon />
           </div>
           <div className={styles['social-media__twitter']}>
-            <a
-              className="twitter-timeline"
-              href="https://twitter.com/szkarupski?ref_src=twsrc%5Etfw"
-            >
+            <a className="twitter-timeline" href="https://twitter.com/szkarupski?ref_src=twsrc%5Etfw">
               Tweets by szkarupski
             </a>
           </div>
         </div>
       </div>
-    </section>
+    </HomeSectionLayout>
   );
 }
