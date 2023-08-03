@@ -7,7 +7,8 @@ export default function Contact() {
   return (
     <HomeSectionLayout headingTitle="Kontakt" sectionId="kontakt" mode="white">
       <p className={styles['contact-form__description']}>
-        Skontaktuj się z nami poprzez <strong>telefon</strong>:
+        Jeżeli interesujesz się bieżącą kampanią wyborczą, posiadasz cenne uwagi dotyczące polityki krajowej i lokalnej,
+        chcesz się zaangażować, skontaktuj się z nami poprzez <strong>telefon</strong>:
       </p>
       <ContactPeople />
 

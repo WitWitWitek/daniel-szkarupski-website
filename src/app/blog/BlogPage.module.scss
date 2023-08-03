@@ -3,8 +3,7 @@
 .blog-page {
   width: 100%;
   min-height: 100vh;
-  padding: 0 10px;
-  @include section-padding;
+  @include blog-padding;
   &__title {
     @include section-heading;
   }
@@ -61,7 +60,7 @@
       align-items: center;
       &-paragraph {
         text-indent: 1.5rem;
-        min-height: 150px;
+        min-height: min-content;
         &-extended {
           display: none;
         }
@@ -77,15 +76,13 @@
     }
 
     &-time {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: $gray;
       text-align: center;
       padding: 0.5rem;
       font-style: italic;
       margin: 0.5rem auto;
       svg {
+        display: inline;
         margin-right: 0.25rem;
       }
     }
@@ -144,8 +141,7 @@
 
       &-excerpt {
         &-paragraph {
-          height: 100px;
-          min-height: unset;
+          min-height: 100px;
         }
       }
 

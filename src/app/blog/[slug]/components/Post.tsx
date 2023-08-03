@@ -69,18 +69,26 @@ export default function Post({ post }: PostProps) {
   const { title, html, feature_image, published_at } = post;
 
   return (
-    <div>
+    <>
       <div style={{ backgroundImage: `url(${feature_image})` }} className={styles.post__image}>
         <Link href="/blog" className={styles['post__btn-back']}>
           Powrót do bloga
         </Link>
-        <h2 className={styles.post__title}>{title}</h2>
+        <h2 className={styles.post__title}>
+          {title}
+          <span className={styles['post__title-backdrop']} />
+        </h2>
       </div>
-      <div className={styles['post__publication-time']}>
-        <TimeIcon />
-        <time>{dateHandler(published_at)}</time>
+      <div className={styles['post__content-container']}>
+        <div className={styles['post__publication-time']}>
+          <TimeIcon />
+          <time>{dateHandler(published_at)}</time>
+        </div>
+        <article className={styles.post__article}>{parse(html, options)}</article>
+        <Link href="/blog" className={styles['post__btn-back']}>
+          Powrót do bloga
+        </Link>
       </div>
-      <article className={styles.post__article}>{parse(html, options)}</article>
-    </div>
+    </>
   );
 }

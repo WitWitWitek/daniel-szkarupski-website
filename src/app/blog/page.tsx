@@ -12,13 +12,13 @@ export default async function BlogPage() {
   const postsData: Promise<PostItem[]> = getPosts();
   const posts = await postsData;
   return (
-    <>
+    <section className={styles['blog-page']}>
       <h1 className={styles['blog-page__title']}>Blog</h1>
       <ul className={styles['blog-page__list']}>
         {posts.map((post) => (
           <PostListItem key={post.slug} postItem={post} />
         ))}
       </ul>
-    </>
+    </section>
   );
 }
