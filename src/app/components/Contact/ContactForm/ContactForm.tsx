@@ -20,7 +20,7 @@ export default function ContactForm() {
     subject: '',
     text: '',
   });
-  const { sendContactForm, isLoading, isSuccess, isError } = useContactForm();
+  const { sendContactForm, formState } = useContactForm();
   const onFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const name = e.target.name as InputName;
     setFormContent((prev) => ({
@@ -35,7 +35,7 @@ export default function ContactForm() {
   };
 
   useEffect(() => {
-    if (isSuccess) {
+    if (formState.success) {
       setFormContent({
         name: '',
         email: '',
@@ -43,7 +43,7 @@ export default function ContactForm() {
         text: '',
       });
     }
-  }, [isSuccess]);
+  }, [formState.success]);
 
   return (
     <form onSubmit={onFormSubmission} className={styles['contact-form__form']}>
@@ -101,16 +101,16 @@ export default function ContactForm() {
         />
       </label>
 
-      <button type="submit" disabled={isLoading} className={styles['contact-form__button']}>
-        {!isLoading ? 'Wyślij' : 'Wysyłam...'}
+      <button type="submit" disabled={formState.loading} className={styles['contact-form__button']}>
+        {!formState.loading ? 'Wyślij' : 'Wysyłam...'}
       </button>
-      {isSuccess && !isError && (
+      {formState.success && !formState.error && (
         <div className={styles['contact-form__success']}>
           <p>✓</p>
           <div>Wysłano poprawnie</div>
         </div>
       )}
-      {!isSuccess && isError && (
+      {!formState.success && formState.error && (
         <div className={styles['contact-form__error']}>
           <p>X</p>
           <div>Błąd wysyłania forumlarza</div>

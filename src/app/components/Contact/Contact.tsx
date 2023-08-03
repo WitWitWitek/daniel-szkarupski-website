@@ -7,12 +7,12 @@ export default function Contact() {
   return (
     <HomeSectionLayout headingTitle="Kontakt" sectionId="kontakt" mode="white">
       <p className={styles['contact-form__description']}>
-        Skontaktuj się z nami poprzez <strong>telefon</strong>: //{' '}
+        Skontaktuj się z nami poprzez <strong>telefon</strong>:
       </p>
       <ContactPeople />
 
       <p className={styles['contact-form__description']}>
-        Lub poprzez <strong>formularz kontaktowy</strong>: //{' '}
+        Lub poprzez <strong>formularz kontaktowy</strong>:
       </p>
       <ContactForm />
     </HomeSectionLayout>
