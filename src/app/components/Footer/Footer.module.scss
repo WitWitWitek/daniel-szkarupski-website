@@ -1,114 +1,118 @@
 @use '../../styles/index' as *;
 
 .footer {
-    background-color: $mainBlue;
-    width: 100%;
-    @include section-padding;
-    color: $white;
+  background-color: $mainBlue;
+  width: 100%;
+  @include section-padding;
+  color: $white;
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user {
+    &-container {
+      width: 100%;
     }
 
-    &__user {
-        &-container {
-            width: 100%;
-        }
-
-        &-title {
-            @include footer-heading;
-        }
-
-        &-description {
-            max-width: 20rem;
-            text-align: left;
-            margin: 1rem 0;
-        }
+    &-title {
+      @include footer-heading;
     }
 
-    &__social-media {
-        width: 200px;
-        display: flex;
-        margin: 1rem 0;
-        &-link {
-            @include btn-cta;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            svg {
-                width: 2rem;
-            }
-            svg > path {
-                fill: $white;
-            }
-            &:hover {
-                svg > path {
-                    fill: $red;
-                }
-            }
-        } 
+    &-description {
+      max-width: 20rem;
+      text-align: left;
+      margin: 1rem 0;
     }
+  }
 
-    &__menu {
-        display: flex;
-        flex-direction: column;
-    }
+  &__social-media {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 0.5rem;
 
-    &__menu-container {
-        h3 {
-            margin: 0.5rem 0;
-            font-weight: 700;
+    &-link {
+      @include btn-cta;
+      flex: 0 1 75px;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 2rem;
+      }
+      svg > path {
+        fill: $white;
+      }
+      &:hover {
+        svg > path {
+          fill: $red;
         }
-        a {
-            display: block;
-            width: max-content;
-            @include navbar-btn;
-            margin: 0.2rem 0;
-            font-weight: 400;
-        }
+      }
     }
+  }
 
-    &__date {
-        margin: 1rem 0;
-        text-align: center;
-        hr {
-            margin-bottom: 0.5rem;
-        }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menu-container {
+    h3 {
+      margin: 0.5rem 0;
+      font-weight: 700;
     }
+    a {
+      display: block;
+      width: max-content;
+      @include navbar-btn;
+      margin: 0.2rem 0;
+      font-weight: 400;
+    }
+  }
+
+  &__date {
+    margin: 1rem 0;
+    text-align: center;
+    hr {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 @include sm {
-    .footer {
-        &__wrapper {
-            display: flex;
-            flex-direction: row;
-        }
-
-        &__user {
-            &-container {
-                width: 50%;
-            }
-
-            &-description {
-                margin: 0 auto;
-                text-align: center;
-            }        
-        }
-
-        &__menu {
-            width: 50%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding-top: 3rem;
-            align-items: flex-start;
-        }
-
-
-        &__social-media {
-            width: 100%;
-            justify-content: center;
-        }
+  .footer {
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
     }
+
+    &__user {
+      &-container {
+        width: 50%;
+      }
+
+      &-description {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    &__menu {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 3rem;
+      align-items: flex-start;
+    }
+
+    &__social-media {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 import FacebookIcon from '@/app/assets/icons/facebook';
 import TwitterIcon from '@/app/assets/icons/twitter';
 import Link from 'next/link';
+import InstagramIcon from '@/app/assets/icons/instagram';
+import TikTokIcon from '@/app/assets/icons/tiktok';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -19,6 +21,12 @@ export default function Footer() {
             </Link>
             <Link href="https://twitter.com/szkarupski" className={styles['footer__social-media-link']}>
               <TwitterIcon />
+            </Link>
+            <Link href="https://www.instagram.com/szkarupski_daniel/" className={styles['footer__social-media-link']}>
+              <InstagramIcon />
+            </Link>
+            <Link href="https://www.tiktok.com/@daniel.szkarupski" className={styles['footer__social-media-link']}>
+              <TikTokIcon />
             </Link>
           </div>
         </div>
