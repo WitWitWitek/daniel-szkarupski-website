@@ -33,27 +33,6 @@
     flex-wrap: wrap;
     margin: 1rem 0;
     gap: 0.5rem;
-
-    &-link {
-      @include btn-cta;
-      padding: 1rem;
-      flex: 0 1 3rem;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      svg {
-        width: 2rem;
-      }
-      svg > path {
-        fill: $white;
-      }
-      &:hover {
-        svg > path {
-          fill: $red;
-        }
-      }
-    }
   }
 
   &__menu {

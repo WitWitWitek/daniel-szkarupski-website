@@ -18,6 +18,7 @@
   overflow: hidden;
 
   &__header {
+    opacity: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,6 +40,7 @@
   }
 
   &__paragraphs-container {
+    opacity: 0;
     p {
       display: flex;
       justify-content: center;
@@ -59,6 +61,7 @@
   }
 
   &__btn-container {
+    opacity: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -78,6 +81,7 @@
     aspect-ratio: 1 / 1;
     position: relative;
     align-self: end;
+    opacity: 0;
   }
 }
 
@@ -132,7 +136,6 @@
 
       p {
         font-size: 1.8rem;
-        // text-shadow: 1px 1px 10px $red;
         font-weight: 700;
         letter-spacing: 0.25rem;
       }
@@ -148,15 +151,16 @@
 
 @include lg {
   .banner {
+    padding-top: 1rem;
     &__header {
       h1 {
-        font-size: 4.3rem;
+        font-size: 3.2rem;
         text-align: center;
-        line-height: 4rem;
+        line-height: 3.5rem;
       }
 
       p {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         font-weight: 700;
         letter-spacing: 0.25rem;
       }

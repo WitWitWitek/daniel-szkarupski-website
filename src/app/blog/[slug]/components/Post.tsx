@@ -70,7 +70,7 @@ export default function Post({ post }: PostProps) {
 
   return (
     <>
-      <div style={{ backgroundImage: `url(${feature_image})` }} className={styles.post__image}>
+      <div style={{ backgroundImage: feature_image ? `url(${feature_image})` : '' }} className={styles.post__image}>
         <Link href="/blog" className={styles['post__btn-back']}>
           Powrót do bloga
         </Link>

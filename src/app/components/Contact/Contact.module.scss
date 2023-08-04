@@ -5,7 +5,9 @@
     margin: 0.5rem 0;
     font-family: inherit;
     line-height: 30px;
+    text-align: justify;
     word-wrap: break-word;
+    text-align: justify;
     strong {
       color: $red;
     }
@@ -78,13 +80,7 @@
 
 @include md {
   .contact-form {
-    &__description {
-      width: 700px;
-      margin: 1.5rem auto;
-    }
-
     &__form {
-      width: 700px;
       margin: 0 auto;
     }
   }

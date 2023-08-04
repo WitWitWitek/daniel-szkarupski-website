@@ -1,16 +1,16 @@
 @use '../../../styles/index' as *;
 
 .contact-people {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
   gap: 1rem;
 
   &__person {
     font-family: inherit;
     font-size: inherit;
-    flex: 1 0 200px;
+    flex: 1 1 200px;
     border-radius: $borderRadius;
     border: 2px $mainBlue solid;
     padding: 1rem;
@@ -29,7 +29,6 @@
 
 @include md {
   .contact-people {
-    width: 700px;
     &__person {
       font-size: 18px;
     }

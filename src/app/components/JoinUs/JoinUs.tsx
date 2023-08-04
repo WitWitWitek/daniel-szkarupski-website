@@ -25,7 +25,7 @@ const teamArray: Person[] = [
   },
   {
     name: 'Karsten Glensk',
-    position: 'Specialista ds. marketingu',
+    position: 'Specjalista ds. marketingu',
     thumbnail: '/team/karsten-glensk.jpg',
   },
   {

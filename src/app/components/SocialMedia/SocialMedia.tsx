@@ -2,6 +2,7 @@ import FacebookIcon from '@/app/assets/icons/facebook';
 import TwitterIcon from '@/app/assets/icons/twitter';
 import styles from './SocialMedia.module.scss';
 import HomeSectionLayout from '../HomeSectionLayout/HomeSectionLayout';
+import SocialMediaTiles from './SocialMediaTiles/SocialMediaTiles';
 
 export default function SocialMedia() {
   return (
@@ -38,6 +39,14 @@ export default function SocialMedia() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className={styles['social-media__links-container']}>
+        <p>
+          Jestem aktywny w wielu mediach społecznościowych. Skorzystaj z bezpośrednich linków by dowiedzieć się{' '}
+          <strong>więcej</strong>:
+        </p>
+        <SocialMediaTiles />
       </div>
     </HomeSectionLayout>
   );

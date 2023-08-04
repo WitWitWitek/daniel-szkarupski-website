@@ -48,6 +48,16 @@
       background-color: #1da1f2;
     }
   }
+
+  &__links-container {
+    p {
+      margin: 2rem auto;
+    }
+    color: $white;
+    strong {
+      color: $red;
+    }
+  }
 }
 
 @include xs {
@@ -63,13 +73,13 @@
   .social-media {
     &__container {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       gap: unset;
     }
 
     &__facebook,
     &__twitter {
-      width: 275px;
+      width: 225px;
     }
   }
 }
@@ -80,7 +90,7 @@
 
     &__facebook,
     &__twitter {
-      width: 350px;
+      width: 250px;
     }
   }
 }
@@ -88,13 +98,12 @@
 @include lg {
   .social-media {
     &__container {
-      justify-content: center;
-      gap: 4rem;
+      gap: 1.5rem;
     }
 
     &__facebook,
     &__twitter {
-      width: 400px;
+      width: 350px;
     }
   }
 }
