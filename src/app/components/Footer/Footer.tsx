@@ -1,8 +1,4 @@
-import FacebookIcon from '@/app/assets/icons/facebook';
-import TwitterIcon from '@/app/assets/icons/twitter';
 import Link from 'next/link';
-import InstagramIcon from '@/app/assets/icons/instagram';
-import TikTokIcon from '@/app/assets/icons/tiktok';
 import styles from './Footer.module.scss';
 import SocialMediaTiles from '../SocialMedia/SocialMediaTiles/SocialMediaTiles';
 
@@ -41,7 +37,10 @@ export default function Footer() {
       </div>
       <div className={styles.footer__date}>
         <hr />
-        {new Date().getFullYear()}
+        <p>
+          <i>Materiał Wyborczy KW Konfedracja Wolność i Niepodległość.</i>
+        </p>
+        <p>Wszelkie prawa zastrzeżone. © {new Date().getFullYear()}</p>
       </div>
     </footer>
   );

@@ -107,7 +107,6 @@
     &__image {
       width: 100%;
       aspect-ratio: 1 / 1;
-      max-height: 90%;
       max-width: 250px;
       align-self: flex-end;
     }
@@ -116,33 +115,34 @@
 
 @include md {
   .banner {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     align-items: center;
     background-position: bottom;
     background-size: 110%;
     &__header {
       width: 100%;
+      gap: 0;
       grid-column: 1 / 2;
       & > :nth-child(n) {
         margin-top: 1rem;
       }
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
-        line-height: 4rem;
+        line-height: 2.1rem;
       }
 
       p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 700;
         letter-spacing: 0.25rem;
       }
     }
 
     &__image {
-      grid-column: 2 / 3;
+      grid-column: 2 / 4;
       align-self: unset;
       max-width: 550px;
     }
@@ -151,10 +151,11 @@
 
 @include lg {
   .banner {
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 1rem;
     &__header {
       h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
         text-align: center;
         line-height: 3.5rem;
       }
