@@ -30,9 +30,6 @@ export default function NavSmall() {
         <a href="/#kontakt" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
           Kontakt
         </a>
-        <a href="/#dolacz-do-nas" className={styles['navbar__menu-link']} onClick={() => setMenuOpen(false)}>
-          Dołącz do nas
-        </a>
         <a
           href="https://wesprzyjrn.pl/"
           className={styles['navbar__menu-link']}

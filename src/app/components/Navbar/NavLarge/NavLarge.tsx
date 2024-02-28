@@ -20,9 +20,6 @@ export default function NavLarge() {
           </a>
         </div>
         <div className={styles['navbar__container--btns']}>
-          <a href="/#dolacz-do-nas" className={styles['navbar__join-btn']}>
-            Dołącz do nas
-          </a>
           <a href="https://wesprzyjrn.pl/" className={styles['navbar__support-btn']} target="_blank" rel="noreferrer">
             Wesprzyj
           </a>

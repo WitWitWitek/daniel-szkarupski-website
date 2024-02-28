@@ -53,8 +53,8 @@ export default function HomeBanner() {
           <a href="https://wesprzyjrn.pl/" className={styles['banner__support-btn']}>
             Wesprzyj
           </a>
-          <a href="/#dolacz-do-nas" className={styles['banner__join-btn']}>
-            Dołącz do nas
+          <a href="/#o-mnie" className={styles['banner__join-btn']}>
+            O mnie
           </a>
         </motion.div>
       </motion.div>
