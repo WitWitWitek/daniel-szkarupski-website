@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './BlogPage.module.scss';
 import PostListItem from './components/PostListItem';
-import { getPosts } from '../lib/sanity-actions';
+import { getPosts } from '../lib/sanityActions';
 
 export const metadata: Metadata = {
   title: 'Blog | Daniel Szkarupski - Ruch Narodowy & Konfederacja',

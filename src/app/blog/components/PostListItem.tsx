@@ -11,7 +11,7 @@ interface PostListItemProps {
 }
 
 export default function PostListItem({ postItem }: PostListItemProps) {
-  const { title, slug, description, coverImage } = postItem;
+  const { title, slug, description, releaseDate, coverImage } = postItem;
   return (
     <li className={styles['blog-page__post']}>
       <div
@@ -23,7 +23,7 @@ export default function PostListItem({ postItem }: PostListItemProps) {
         </Link>
       </div>
       <div className={styles['blog-page__post-time']}>
-        {/* <TimeIcon /> <time>{dateHandler(published_at)}</time> */}
+        <TimeIcon /> <time>{dateHandler(releaseDate)}</time>
       </div>
       <div className={styles['blog-page__post-excerpt']}>
         <p className={styles['blog-page__post-excerpt-paragraph-extended']}>{description}</p>

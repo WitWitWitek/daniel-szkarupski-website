@@ -6,6 +6,7 @@ export async function getPosts(): Promise<Post[]> {
       title,
       "slug": slug.current,
       coverImage,
+      releaseDate,
       description
     }`;
 
@@ -19,6 +20,7 @@ export async function getSinglePost(slug: string): Promise<Post> {
             "slug": slug.current,
               title,
               description,
+              releaseDate,
               content,
               coverImage,
           }[0]`;

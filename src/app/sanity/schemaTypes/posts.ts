@@ -20,7 +20,7 @@ export default {
     }),
     defineField({
       title: 'Data publikacji',
-      type: 'date',
+      type: 'datetime',
       name: 'releaseDate',
     }),
     defineField({

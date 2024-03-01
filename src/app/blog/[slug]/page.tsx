@@ -1,4 +1,4 @@
-import { getSinglePost, getPosts } from '@/app/lib/sanity-actions';
+import { getSinglePost, getPosts } from '@/app/lib/sanityActions';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -26,8 +26,7 @@ export async function generateMetadata({ params: { slug } }: Params): Promise<Me
 }
 
 export default async function PostPage({ params: { slug } }: Params) {
-  const postData: Promise<PostType | undefined> = getSinglePost(slug);
-  const post = await postData;
+  const post = await getSinglePost(slug);
 
   if (!post) {
     notFound();

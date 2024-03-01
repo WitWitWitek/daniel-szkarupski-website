@@ -4,6 +4,7 @@ export interface Post {
   title: string;
   slug: string;
   coverImage: string;
+  releaseDate: string;
   description: string;
   content: TypedObject | TypedObject[];
 }
