@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
-import { getPosts } from '../lib/posts';
 import styles from './BlogPage.module.scss';
 import PostListItem from './components/PostListItem';
+import { getPosts } from '../lib/sanity-actions';
 
 export const metadata: Metadata = {
   title: 'Blog | Daniel Szkarupski - Ruch Narodowy & Konfederacja',
   description: 'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim',
 };
 
+export const revalidate = 120;
+
 export default async function BlogPage() {
-  const postsData: Promise<PostItem[]> = getPosts();
-  const posts = await postsData;
+  const posts = await getPosts();
+
   return (
     <section className={styles['blog-page']}>
       <h1 className={styles['blog-page__title']}>Blog</h1>
