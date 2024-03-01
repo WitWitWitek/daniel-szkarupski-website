@@ -2,15 +2,15 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
 import HomeBanner from './components/HomeBanner/HomeBanner';
 import SocialMedia from './components/SocialMedia/SocialMedia';
-import getAboutMePage from './lib/aboutMePage';
+import { getAboutMeSection } from './lib/sanity-actions';
 
 export default async function Home() {
-  const aboutMe = getAboutMePage();
-  const { html } = await aboutMe;
+  const { content } = await getAboutMeSection();
+
   return (
     <>
       <HomeBanner />
-      <AboutMe content={html} />
+      {content && <AboutMe content={content} />}
       <SocialMedia />
       <Contact />
     </>

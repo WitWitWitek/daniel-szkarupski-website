@@ -1,4 +1,4 @@
-import { getPosts, getSinglePost } from '@/app/lib/posts';
+import { getSinglePost, getPosts } from '@/app/lib/sanity-actions';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { slug } }: Params): Promise<Me
 
   return {
     title: `${post.title} | Daniel Szkarupski - Ruch Narodowy & Konfederacja`,
-    description: post.excerpt,
+    description: post.description,
   };
 }
 

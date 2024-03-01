@@ -8,27 +8,13 @@
       margin: 0.5rem 0;
       font-family: inherit;
       @include fontSize;
-      line-height: 30px;
+      line-height: 32px;
       word-wrap: break-word;
     }
 
     strong {
       color: $red;
       font-weight: bold;
-    }
-  }
-}
-
-@include sm {
-  .about-me {
-    &__text {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      p {
-        flex: 1 1 300px;
-      }
     }
   }
 }

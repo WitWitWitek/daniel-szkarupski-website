@@ -1,12 +1,15 @@
 /* eslint-disable react/no-danger */
+import { PortableText } from '@portabletext/react';
 import HomeSectionLayout from '../HomeSectionLayout/HomeSectionLayout';
 import styles from './AboutMe.module.scss';
 
-export default function AboutMe({ content }: { content: string }) {
+export const revalidate = 120;
+
+export default function AboutMe({ content }: IAboutMeSection) {
   return (
     <HomeSectionLayout headingTitle="O mnie" sectionId="o-mnie" mode="white">
       <div className={styles['about-me__text']}>
-        <article dangerouslySetInnerHTML={{ __html: content }} />
+        <PortableText value={content} />
       </div>
     </HomeSectionLayout>
   );
