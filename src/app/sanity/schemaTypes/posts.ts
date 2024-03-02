@@ -1,4 +1,5 @@
 import {defineField, Rule} from 'sanity'
+import {PlayIcon} from '@sanity/icons'
 
 export default {
   name: 'posts',
@@ -43,6 +44,18 @@ export default {
           type: 'block',
         },
         defineField({
+          type: 'object',
+          name: 'youtube',
+          icon: PlayIcon,
+          fields: [
+            defineField({
+              name: 'url',
+              type: 'url',
+              title: 'YouTube wideo URL',
+            }),
+          ],
+        }),
+        defineField({
           type: 'image',
           name: 'image',
           options: {hotspot: true},
@@ -50,9 +63,6 @@ export default {
             {
               name: 'alt',
               type: 'string',
-              options: {
-                isHighlighted: true,
-              },
             },
           ],
         }),

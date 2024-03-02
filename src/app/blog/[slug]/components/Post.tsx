@@ -5,6 +5,7 @@ import { Post } from '@/app/types';
 import { urlFor } from '@/app/lib/sanity';
 import styles from '../Post.module.scss';
 import PostContent from './PostContent';
+import PostYouTube from './PostYouTube';
 
 type PostProps = {
   post: Post;
