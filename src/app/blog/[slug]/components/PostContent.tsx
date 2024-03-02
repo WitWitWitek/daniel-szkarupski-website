@@ -6,7 +6,7 @@ import styles from '../Post.module.scss';
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   types: {
-    image: ({ value }) => <img src={urlFor(value).url()} alt="content element" />,
+    image: ({ value }) => <img src={urlFor(value).url()} alt={value.alt} />,
   },
 };
 

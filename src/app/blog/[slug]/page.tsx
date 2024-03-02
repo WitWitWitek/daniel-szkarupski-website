@@ -10,6 +10,8 @@ type Params = {
   };
 };
 
+export const revalidate = 1;
+
 export async function generateMetadata({ params: { slug } }: Params): Promise<Metadata> {
   const post = await getSinglePost(slug);
 

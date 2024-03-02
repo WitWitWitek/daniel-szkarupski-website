@@ -63,9 +63,12 @@
       margin-left: 3rem;
     }
     img {
-      max-width: 80%;
       display: block;
       margin: 1rem auto;
+      max-width: 100%;
+      @include sm {
+        max-width: 80%;
+      }
     }
   }
 

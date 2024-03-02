@@ -42,9 +42,20 @@ export default {
         {
           type: 'block',
         },
-        {
+        defineField({
           type: 'image',
-        },
+          name: 'image',
+          options: {hotspot: true},
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        }),
       ],
     }),
   ],
