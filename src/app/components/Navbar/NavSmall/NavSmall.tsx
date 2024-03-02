@@ -10,8 +10,13 @@ export default function NavSmall() {
 
   return (
     <>
-      <button className={styles['navbar__burger-btn']} type="button" onClick={() => setMenuOpen((prev) => !prev)}>
-        <Fade toggled={isMenuOpen} color={isMenuOpen ? '#0f2947' : '#ffffff'} />
+      <button
+        className={styles['navbar__burger-btn']}
+        type="button"
+        aria-label="menu"
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        <Fade toggled={isMenuOpen} color={isMenuOpen ? '#0f2947' : '#ffffff'} aria-label="ikona menu" />
       </button>
       <div
         className={`${styles.navbar__backdrop} ${isMenuOpen ? styles['navbar__backdrop-active'] : ''}`}
