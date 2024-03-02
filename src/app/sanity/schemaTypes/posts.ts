@@ -68,5 +68,11 @@ export default {
         }),
       ],
     }),
+    defineField({
+      name: 'gallery',
+      type: 'array',
+      title: 'Galeria',
+      of: [{type: 'image'}],
+    }),
   ],
 }

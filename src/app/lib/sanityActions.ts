@@ -23,6 +23,7 @@ export async function getSinglePost(slug: string): Promise<Post> {
               releaseDate,
               content,
               coverImage,
+              gallery
           }[0]`;
 
   const postData = await client.fetch(query);

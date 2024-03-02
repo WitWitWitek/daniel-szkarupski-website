@@ -7,4 +7,5 @@ export interface Post {
   releaseDate: string;
   description: string;
   content: TypedObject | TypedObject[];
+  gallery: any[];
 }

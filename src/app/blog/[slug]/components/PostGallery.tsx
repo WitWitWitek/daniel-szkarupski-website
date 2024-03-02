@@ -1,22 +1,15 @@
 import styles from './PostGallery.module.scss';
 
 type Props = {
-  images: { attribs: ImageType }[],
+  urls: string[];
 };
 
-export default function PostGallery({ images }: Props) {
+export default function PostGallery({ urls }: Props) {
   return (
     <div className={styles.post__gallery}>
-      {images.map((image) => (
-        <figure
-          className={styles['post__gallery-figure']}
-          key={image.attribs.src}
-        >
-          <img
-            className={styles['post__gallery-image']}
-            src={image.attribs.src}
-            alt={image.attribs.alt}
-          />
+      {urls.map((url) => (
+        <figure className={styles['post__gallery-figure']} key={url}>
+          <img className={styles['post__gallery-image']} src={url} alt={url} />
         </figure>
       ))}
     </div>

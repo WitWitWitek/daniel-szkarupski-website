@@ -2,17 +2,18 @@ import Link from 'next/link';
 import { FaRegClock as TimeIcon } from 'react-icons/fa';
 import { dateHandler } from '@/app/lib/dataHandler';
 import { Post } from '@/app/types';
-import { urlFor } from '@/app/lib/sanity';
+import { getGalleryImages, urlFor } from '@/app/lib/sanity';
 import styles from '../Post.module.scss';
 import PostContent from './PostContent';
-import PostYouTube from './PostYouTube';
+import PostGallery from './PostGallery';
 
 type PostProps = {
   post: Post;
 };
 
 export default function PostPage({ post }: PostProps) {
-  const { title, content, coverImage, releaseDate } = post;
+  const { title, content, coverImage, releaseDate, gallery } = post;
+  console.log(gallery);
   return (
     <>
       <div
@@ -33,6 +34,7 @@ export default function PostPage({ post }: PostProps) {
           <time>{dateHandler(releaseDate)}</time>
         </div>
         <PostContent content={content} />
+        <PostGallery urls={getGalleryImages(gallery)} />
         <Link href="/blog" className={styles['post__btn-back']}>
           Powrót do bloga
         </Link>
