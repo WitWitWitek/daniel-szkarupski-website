@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL). Wielkie zjednoczenie środowisk wolnościowych, narodowych, patriotycznych i konserwatywnych - Szkarupski, Korwin, Winnicki, Braun, Kulesza, Bosak, Berkowicz, Tumanowicz, Mentzen.',
   keywords:
-    'Ruch Narodowy, Konfederacja, Patriotyzm, Województwo opolskie, Wybory do Sejmu i Senatu 2023, Konfederacja w wojewódzctwie opolskim, Ruch Narodowy w wojewódzctwie opolskim',
+    'polityka, samorząd, sejmik, patriotyzm, Ruch Narodowy, Konfederacja, patriotyzm, województwo opolskie, wybory, Opole, Nysa, Brzeg, Opolszczyzna',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
