@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaRegClock as TimeIcon } from 'react-icons/fa';
+import { FaRegClock } from 'react-icons/fa';
 import { dateHandler } from '@/app/lib/dataHandler';
 import { Post } from '@/app/types';
 import { getGalleryImages, urlFor } from '@/app/lib/sanity';
@@ -13,7 +13,6 @@ type PostProps = {
 
 export default function PostPage({ post }: PostProps) {
   const { title, content, coverImage, releaseDate, gallery } = post;
-  console.log(gallery);
   return (
     <>
       <div
@@ -30,7 +29,7 @@ export default function PostPage({ post }: PostProps) {
       </div>
       <div className={styles['post__content-container']}>
         <div className={styles['post__publication-time']}>
-          <TimeIcon />
+          <FaRegClock />
           <time>{dateHandler(releaseDate)}</time>
         </div>
         <PostContent content={content} />

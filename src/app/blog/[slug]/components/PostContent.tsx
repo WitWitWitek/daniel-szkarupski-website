@@ -8,7 +8,7 @@ import PostYouTube from './PostYouTube';
 const richTextComponents: Partial<PortableTextReactComponents> = {
   types: {
     image: ({ value }) => <img src={urlFor(value).url()} alt={value.alt} />,
-    youtube: ({ value }) => <PostYouTube src={value.url} title={value.url.toString()} />,
+    youtube: ({ value }) => <PostYouTube src={value.url} />,
   },
 };
 
