@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import Link from 'next/link';
 import { dateHandler } from '@/app/lib/dataHandler';
 import { FaRegClock as TimeIcon } from 'react-icons/fa';

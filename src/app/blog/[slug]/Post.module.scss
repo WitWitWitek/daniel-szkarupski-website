@@ -47,7 +47,7 @@
     @include blog-padding;
   }
 
-  &__article {
+  &__content {
     width: 100%;
     margin: 1rem 0;
     text-align: justify;
@@ -63,7 +63,9 @@
       margin-left: 3rem;
     }
     img {
-      max-width: 100%;
+      max-width: 80%;
+      display: block;
+      margin: 1rem auto;
     }
   }
 

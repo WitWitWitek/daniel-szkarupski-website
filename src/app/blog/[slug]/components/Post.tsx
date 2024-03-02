@@ -2,15 +2,9 @@ import Link from 'next/link';
 import { FaRegClock as TimeIcon } from 'react-icons/fa';
 import { dateHandler } from '@/app/lib/dataHandler';
 import { Post } from '@/app/types';
-import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import { urlFor } from '@/app/lib/sanity';
 import styles from '../Post.module.scss';
-
-const myPortableTextComponents: Partial<PortableTextReactComponents> = {
-  types: {
-    image: ({ value }) => <img src={urlFor(value).url()} alt="asdasd" />,
-  },
-};
+import PostContent from './PostContent';
 
 type PostProps = {
   post: Post;
@@ -37,9 +31,7 @@ export default function PostPage({ post }: PostProps) {
           <TimeIcon />
           <time>{dateHandler(releaseDate)}</time>
         </div>
-        <article className={styles.post__article}>
-          <PortableText value={content} components={myPortableTextComponents} />
-        </article>
+        <PostContent content={content} />
         <Link href="/blog" className={styles['post__btn-back']}>
           Powrót do bloga
         </Link>
