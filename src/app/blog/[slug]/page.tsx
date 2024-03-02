@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { slug } }: Params): Promise<Me
   }
 
   return {
-    title: `${post.title} | Daniel Szkarupski - Ruch Narodowy & Konfederacja`,
+    title: `${post.title} | Daniel Szkarupski`,
     description: post.description,
   };
 }

@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 export const metadata: Metadata = {
   title: 'Daniel Szkarupski - Ruch Narodowy & Konfederacja',
   description:
-    'Kandydat nr 2 Konfederacji do Sejmu RP w wojewódzctwie opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL). Wielkie zjednoczenie środowisk wolnościowych, narodowych, patriotycznych i konserwatywnych - Szkarupski, Korwin, Winnicki, Braun, Kulesza, Bosak, Berkowicz, Tumanowicz, Mentzen.',
+    'Kandydat nr 2 Konfederacji do Sejmu RP w woj. opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL).',
   keywords:
     'polityka, samorząd, sejmik, patriotyzm, Ruch Narodowy, Konfederacja, patriotyzm, województwo opolskie, wybory, Opole, Nysa, Brzeg, Opolszczyzna',
 };

@@ -10,6 +10,7 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Tytuł',
+      validation: (Rule) => Rule.required().max(50),
     }),
     defineField({
       name: 'slug',
@@ -33,7 +34,7 @@ export default {
       name: 'description',
       type: 'text',
       title: 'Opis',
-      validation: (Rule) => Rule.min(1).max(200),
+      validation: (Rule) => Rule.min(1).max(156),
     }),
     defineField({
       name: 'content',
