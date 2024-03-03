@@ -5,15 +5,20 @@
 @use '../../styles/variables' as *;
 
 .post {
+  width: 100%;
+  min-height: 100vh;
+  @include sm {
+    @include blog-padding;
+  }
   &__image {
     width: 100%;
-    height: 450px;
+    height: 350px;
     background-position: center;
     background-size: cover;
     background-color: $mainBlue;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -34,17 +39,25 @@
       z-index: -1;
       inset: 50%;
       transform: translate(-50%, -50%);
+      padding: 3rem;
     }
   }
 
   &__btn-back {
     align-self: flex-start;
-    margin-top: 1rem;
     @include btn-cta($white, $red);
+    &--absolute {
+      @extend .post__btn-back;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
   }
 
   &__content-container {
-    @include blog-padding;
+    @media screen and (max-width: 768px) {
+      @include blog-padding;
+    }
   }
 
   &__content {
@@ -64,7 +77,7 @@
     }
     img {
       display: block;
-      margin: 1rem auto;
+      margin: 0.5rem auto;
       max-width: 100%;
       @include sm {
         max-width: 80%;
@@ -83,8 +96,8 @@
     &-figcaption {
       font-family: inherit;
       font-weight: 300;
-      text-align: center;
       font-style: italic;
+      text-align: center;
       color: $gray;
       margin: 0.5rem auto;
     }

@@ -2,7 +2,7 @@ import { client } from './sanity';
 import { Post } from '../types';
 
 export async function getPosts(): Promise<Post[]> {
-  const query = `*[_type == "posts"] {
+  const query = `*[_type == "posts"] | order(releaseDate desc) {
       title,
       "slug": slug.current,
       coverImage,

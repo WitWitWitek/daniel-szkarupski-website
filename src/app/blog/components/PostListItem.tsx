@@ -28,7 +28,7 @@ export default function PostListItem({ postItem }: PostListItemProps) {
         <p className={styles['blog-page__post-excerpt-paragraph-extended']}>{description}</p>
         <p className={styles['blog-page__post-excerpt-paragraph']}>{`${
           description !== null ? description.substring(0, 200) : description
-        }...`}</p>
+        }`}</p>
         <Link href={`/blog/${slug}`} className={styles['blog-page__post-btn']}>
           Czytaj całość
         </Link>

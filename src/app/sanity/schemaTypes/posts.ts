@@ -64,6 +64,8 @@ export default {
             {
               name: 'alt',
               type: 'string',
+              title: 'Tytuł obrazu (wymagany)',
+              validation: (Rule) => Rule.required(),
             },
           ],
         }),
@@ -73,7 +75,19 @@ export default {
       name: 'gallery',
       type: 'array',
       title: 'Galeria',
-      of: [{type: 'image'}],
+      of: [
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Tytuł obrazu (wymagany)',
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
+      ],
     }),
   ],
 }
