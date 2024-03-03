@@ -14,6 +14,15 @@ export async function getPosts(): Promise<Post[]> {
   return postsData;
 }
 
+export async function getPostsSlugs(): Promise<{ slug: string }[]> {
+  const query = `*[_type == "posts"] {
+      "slug": slug.current,
+    }`;
+
+  const postsData = await client.fetch(query);
+  return postsData;
+}
+
 export async function getSinglePost(slug: string): Promise<Post> {
   const query = `
         *[_type == "posts" && slug.current == '${slug}'] {
