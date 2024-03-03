@@ -80,8 +80,8 @@
   .social-media {
     &__container {
       flex-direction: row;
-      justify-content: space-between;
-      gap: unset;
+      justify-content: center;
+      gap: 2rem;
     }
 
     &__facebook,

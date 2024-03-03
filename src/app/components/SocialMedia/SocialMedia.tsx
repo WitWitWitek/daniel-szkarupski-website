@@ -43,8 +43,7 @@ export default function SocialMedia() {
 
       <div className={styles['social-media__links-container']}>
         <p>
-          Jestem aktywny w wielu mediach społecznościowych. Skorzystaj z bezpośrednich linków by dowiedzieć się{' '}
-          <strong>więcej</strong>:
+          Jestem aktywny w wielu mediach społecznościowych. Skorzystaj z bezpośrednich linków by dowiedzieć się więcej:
         </p>
         <SocialMediaTiles />
       </div>
