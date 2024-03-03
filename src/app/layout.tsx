@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     'Kandydat nr 2 Konfederacji do Sejmu RP w woj. opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL).',
   keywords:
     'polityka, samorząd, sejmik, patriotyzm, Ruch Narodowy, Konfederacja, patriotyzm, województwo opolskie, wybory, Opole, Nysa, Brzeg, Opolszczyzna',
+  openGraph: {
+    title: 'Daniel Szkarupski - Ruch Narodowy & Konfederacja',
+    description:
+      'Kandydat nr 2 Konfederacji do Sejmu RP w woj. opolskim. Konfederacja to jedyny antysystemowy wybór spoza układu okrągłego stołu (PiS, PO, SLD, PSL).',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
