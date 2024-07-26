@@ -5,13 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 80",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.2",
     "@portabletext/react": "^3.0.11",
     "@portabletext/types": "^2.0.8",
     "@sanity/image-url": "^1.0.2",
@@ -25,23 +22,27 @@
     "hamburger-react": "^2.5.0",
     "html-react-parser": "^4.0.0",
     "isomorphic-dompurify": "^1.5.0",
+    "next": "14.1.2",
     "next-sanity": "^8.1.3",
     "nodemailer": "^6.9.2",
-    "react-icons": "^4.10.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.10.1",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.8",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.2",
-    "@types/nodemailer": "^6.4.8",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "14.1.2",
     "eslint-config-prettier": "^8.8.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "typescript": "^5"
   }
 }
