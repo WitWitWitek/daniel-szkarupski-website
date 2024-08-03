@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   verification: {
     google: "KfG_6UiQAA_XZvxM_c2PGYluzLiGOmv9Re4rMR0Rals",
   },
+  alternates: {
+    canonical: "https://daniel-szkarupski.pl",
+  },
+  metadataBase: new URL("https://daniel-szkarupski.pl"),
 };
 
 export default function RootLayout({
