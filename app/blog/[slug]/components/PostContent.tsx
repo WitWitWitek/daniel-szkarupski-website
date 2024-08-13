@@ -5,12 +5,20 @@ import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { urlFor } from "@/app/lib/sanity";
 import styles from "../Post.module.scss";
 import PostYouTube from "./PostYouTube";
+import Image from "next/image";
 
 const richTextComponents: Partial<PortableTextReactComponents> = {
   types: {
     image: ({ value }) => (
       <div>
-        <img src={urlFor(value).url()} alt={value.alt} />
+        <div className={styles["post__figure-container"]}>
+          <Image
+            className={styles["post__figure-image"]}
+            src={urlFor(value).url()}
+            alt={value.alt}
+            fill
+          />
+        </div>
         <p className={styles["post__figure-figcaption"]}>{value.alt}</p>
       </div>
     ),

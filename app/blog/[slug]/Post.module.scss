@@ -1,8 +1,8 @@
-@use '../../styles/breakpoints' as *;
-@use '../../styles/buttons' as *;
-@use '../../styles/headings' as *;
-@use '../../styles/paddings' as *;
-@use '../../styles/variables' as *;
+@use "../../styles/breakpoints" as *;
+@use "../../styles/buttons" as *;
+@use "../../styles/headings" as *;
+@use "../../styles/paddings" as *;
+@use "../../styles/variables" as *;
 
 .post {
   width: 100%;
@@ -88,10 +88,17 @@
   &__figure {
     width: 100%;
     margin: 1rem auto;
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 1rem;
+    }
     &-image {
       display: block;
-      max-width: 100%;
-      margin: 0 auto;
+      margin: auto;
+      width: 100%;
+      object-fit: cover;
     }
     &-figcaption {
       font-family: inherit;
@@ -99,7 +106,8 @@
       font-style: italic;
       text-align: center;
       color: $gray;
-      margin: 0.5rem auto;
+      line-height: auto;
+      text-indent: 0;
     }
   }
 
@@ -144,6 +152,7 @@
         max-height: 450px;
       }
       &-figcaption {
+        margin: auto;
         max-width: 600px;
       }
     }
