@@ -1,5 +1,6 @@
 import {defineField, Rule} from 'sanity'
 import {PlayIcon} from '@sanity/icons'
+import {getExtension, getImageDimensions, getImageAsset} from '@sanity/asset-utils'
 
 export default {
   name: 'posts',
@@ -28,7 +29,33 @@ export default {
     defineField({
       name: 'coverImage',
       type: 'image',
-      title: 'Cover Image',
+      title: 'Obrazk główny',
+      description: 'W celu optymalizacji obrazków należy użyc strny https://tinypng.com/',
+      validation: (Rule) =>
+        Rule.custom((value) => {
+          if (!value) {
+            return true
+          }
+
+          const filetype = getExtension(value.asset?._ref ?? '')
+
+          if (
+            filetype !== 'jpg' &&
+            filetype !== 'jpeg' &&
+            filetype !== 'png' &&
+            filetype !== 'webp'
+          ) {
+            return 'Obrazem musi mieć rozszerzenie JPG/JPEG/PNG/WEBP'
+          }
+
+          const {width} = getImageDimensions(value.asset?._ref ?? '')
+
+          if (width > 2048) {
+            return 'Obrazek może mieć maksymalną szerokość 2048'
+          }
+
+          return true
+        }),
     }),
     defineField({
       name: 'description',
@@ -59,7 +86,33 @@ export default {
         defineField({
           type: 'image',
           name: 'image',
+          description: 'W celu optymalizacji obrazków należy użyc strny https://tinypng.com/',
           options: {hotspot: true},
+          validation: (Rule) =>
+            Rule.custom((value) => {
+              if (!value) {
+                return true
+              }
+
+              const filetype = getExtension(value.asset?._ref ?? '')
+
+              if (
+                filetype !== 'jpg' &&
+                filetype !== 'jpeg' &&
+                filetype !== 'png' &&
+                filetype !== 'webp'
+              ) {
+                return 'Obrazem musi mieć rozszerzenie JPG/JPEG/PNG/WEBP'
+              }
+
+              const {width} = getImageDimensions(value.asset?._ref ?? '')
+
+              if (width > 2048) {
+                return 'Obrazek może mieć maksymalną szerokość 2048'
+              }
+
+              return true
+            }),
           fields: [
             {
               name: 'alt',

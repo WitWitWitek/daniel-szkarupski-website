@@ -1,4 +1,4 @@
-@use '../styles/index' as *;
+@use "../styles/index" as *;
 
 .blog-page {
   width: 100%;
@@ -27,6 +27,9 @@
       justify-content: center;
       align-items: flex-end;
       border-bottom: 1px solid $gray;
+      image {
+        object-fit: cover;
+      }
       &:hover {
         filter: brightness(105%);
       }
@@ -46,6 +49,7 @@
       @include fontSize;
       font-weight: 700;
       padding: 1rem;
+      z-index: 1;
       &:hover {
         color: $red;
       }

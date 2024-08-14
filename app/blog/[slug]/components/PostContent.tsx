@@ -16,7 +16,8 @@ const richTextComponents: Partial<PortableTextReactComponents> = {
             className={styles["post__figure-image"]}
             src={urlFor(value).url()}
             alt={value.alt}
-            fill
+            width={500}
+            height={300}
           />
         </div>
         <p className={styles["post__figure-figcaption"]}>{value.alt}</p>

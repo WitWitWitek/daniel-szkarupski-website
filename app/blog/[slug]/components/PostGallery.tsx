@@ -15,7 +15,8 @@ export default function PostGallery({ urls }: Props) {
               className={styles["post__gallery-image"]}
               src={url}
               alt={url}
-              fill
+              width={500}
+              height={300}
             />
           </div>
         </figure>
