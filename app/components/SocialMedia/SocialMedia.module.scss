@@ -1,4 +1,4 @@
-@use '../../styles/index' as *;
+@use "../../styles/index" as *;
 
 .social-media {
   &__container {
@@ -16,11 +16,12 @@
     border-radius: $borderRadius;
     width: min-content;
     overflow: hidden;
+    width: 100%;
   }
 
   &__facebook,
   &__twitter {
-    width: 250px;
+    width: 100%;
     height: 500px;
     overflow-y: auto;
     position: relative;
@@ -44,15 +45,18 @@
     padding: 0.5rem 0;
     display: grid;
     justify-items: center;
+    height: 65px;
     svg > path {
       fill: $white;
+      width: 50px;
+      aspect-ratio: 1 / 1;
     }
     &-facebook {
       background-color: #3b5998;
     }
 
     &-twitter {
-      background-color: #1da1f2;
+      background-color: #000000;
     }
   }
 
@@ -71,7 +75,7 @@
   .social-media {
     &__facebook,
     &__twitter {
-      width: 300px;
+      width: 100%;
     }
   }
 }
@@ -83,22 +87,12 @@
       justify-content: center;
       gap: 2rem;
     }
-
-    &__facebook,
-    &__twitter {
-      width: 225px;
-    }
   }
 }
 
 @include md {
   .social-media {
     width: 100%;
-
-    &__facebook,
-    &__twitter {
-      width: 250px;
-    }
   }
 }
 
@@ -106,11 +100,6 @@
   .social-media {
     &__container {
       gap: 1.5rem;
-    }
-
-    &__facebook,
-    &__twitter {
-      width: 350px;
     }
   }
 }
