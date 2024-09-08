@@ -3,51 +3,72 @@
 .post {
   &__gallery {
     width: 100%;
+    height: 200px;
+    @include md {
+      height: 450px;
+    }
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    &-figure {
-      display: block;
+    gap: 1rem;
+    background: transparent;
+    position: relative;
+    &-section {
       overflow: hidden;
-      position: relative;
-      display: grid;
-      align-items: center;
-      border: 1px solid rgba($gray, 0.5);
-      width: 100%;
+      padding: 0.2rem;
+      @include md {
+        padding: 1rem;
+      }
+      margin: 0.5rem 0;
     }
     &-container {
       position: relative;
       width: 100%;
-      height: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      flex-shrink: 0;
+      padding: 0.5rem 0;
     }
     &-image {
-      display: block;
+      position: relative;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
       margin: auto;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
     }
   }
-}
-
-@include sm {
-  .post {
-    gap: 1rem;
-    &__gallery {
-      justify-items: flex-start;
-      &-figure {
-        flex: 1 1 30%;
+  &__subgallery {
+    width: 100%;
+    padding: 0.2rem;
+    @include md {
+      padding: 1rem;
+    }
+    overflow: hidden;
+    &-btn {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-items: center;
+      align-items: center;
+      height: 50px;
+      @include md {
+        height: 150px;
       }
-      &-container {
-        position: relative;
-        width: 100%;
-      }
-      &-image {
-        width: 100%;
-        height: auto;
-      }
+      overflow: hidden;
+      border: none;
+    }
+    &-image {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
