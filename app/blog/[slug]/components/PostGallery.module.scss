@@ -3,9 +3,9 @@
 .post {
   &__gallery {
     width: 100%;
-    height: 200px;
+    height: 400px;
     @include md {
-      height: 450px;
+      height: 500px;
     }
     display: flex;
     justify-content: center;
@@ -38,6 +38,7 @@
       width: auto;
       max-width: 100%;
       margin: auto;
+      border-radius: 10px;
       cursor: grab;
       &:active {
         cursor: grabbing;
@@ -57,12 +58,13 @@
       width: 100%;
       justify-items: center;
       align-items: center;
-      height: 50px;
+      height: 100px;
       @include md {
         height: 150px;
       }
       overflow: hidden;
       border: none;
+      border-radius: 10px;
     }
     &-image {
       height: auto;

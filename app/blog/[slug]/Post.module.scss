@@ -22,6 +22,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
     @include blog-padding;
     img {
       object-fit: cover;
@@ -65,6 +66,9 @@
     text-indent: 2rem;
     word-wrap: break-word;
     line-height: 30px;
+    @media only screen and (max-width: 768px) {
+      @include blog-padding;
+    }
     p {
       margin: 0.5rem 0;
       @include sm {
