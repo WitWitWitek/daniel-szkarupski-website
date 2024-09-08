@@ -1,11 +1,11 @@
-@use './breakpoints' as *;
-@use './variables' as *;
+@use "./breakpoints" as *;
+@use "./variables" as *;
 
 @mixin section-padding {
   padding: 1rem;
 
   @include xs {
-    padding: 1rem 10%;
+    padding: 1rem;
   }
 
   @include sm {
@@ -13,7 +13,7 @@
   }
 
   @include md {
-    padding: 1rem 25%;
+    padding: 1rem 20%;
   }
 }
 
@@ -29,7 +29,7 @@
   }
 
   @include md {
-    padding: 0 22.5% 1rem;
+    padding: 0 20% 1rem;
   }
 }
 
@@ -37,7 +37,7 @@
   padding: 0 1rem;
 
   @include xs {
-    padding: 0 10%;
+    padding: 0 1rem;
   }
 
   @include sm {
@@ -45,6 +45,6 @@
   }
 
   @include md {
-    padding: 0 15%;
+    padding: 0 20%;
   }
 }
