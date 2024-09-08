@@ -58,9 +58,7 @@
   }
 
   &__content-container {
-    @media screen and (max-width: 768px) {
-      @include blog-padding;
-    }
+    @include blog-padding;
   }
 
   &__content {
