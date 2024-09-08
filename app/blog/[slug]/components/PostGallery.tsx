@@ -69,7 +69,7 @@ export default function PostGallery({ urls }: PostGalleryProps) {
                   loading="eager"
                   className={styles["post__subgallery-image"]}
                   src={url}
-                  alt={`Car image ${index}`}
+                  alt={`Zdjęcia galerii posta nr ${index + 1}`}
                 />
               </button>
             </SwiperSlide>
