@@ -1,4 +1,4 @@
-@use '../../styles/index' as *;
+@use "../../styles/index" as *;
 
 .contact-form {
   &__description {
@@ -50,6 +50,7 @@
     @include btn-cta;
     margin: unset;
     border-radius: $borderRadius;
+    font-size: 1rem;
   }
 
   &__success {
