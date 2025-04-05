@@ -17,6 +17,26 @@
   }
 }
 
+@mixin fullscreen-padding {
+  padding: 1rem;
+  padding-top: calc(70px + 1rem);
+
+  @include xs {
+    padding: 1rem;
+    padding-top: calc(70px + 1rem);
+  }
+
+  @include sm {
+    padding: 1rem 12.5%;
+    padding-top: calc(70px + 1rem);
+  }
+
+  @include md {
+    padding: 1rem 20%;
+    padding-top: calc(70px + 1rem);
+  }
+}
+
 @mixin blog-padding {
   padding: 0 1rem 1rem;
 

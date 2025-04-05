@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Variants, motion } from 'framer-motion';
-import { FaShieldAlt, FaPuzzlePiece, FaUserCheck } from 'react-icons/fa';
-import styles from './HomeBanner.module.scss';
+import Image from "next/image";
+import { Variants, motion } from "framer-motion";
+import { FaShieldAlt, FaPuzzlePiece, FaUserCheck } from "react-icons/fa";
+import styles from "./HomeBanner.module.scss";
 
 const container: Variants = {
   whileInView: (i = 1) => ({
@@ -30,15 +30,30 @@ const homeImage: Variants = {
 export default function HomeBanner() {
   return (
     <section className={styles.banner}>
-      <motion.div variants={homeImage} animate="whileInView" className={styles.banner__image}>
-        <Image src="/daniel-cover.png" alt="Daniel Szkarupski zdjęcie promocyjne" fill />
+      <motion.div
+        variants={homeImage}
+        animate="whileInView"
+        className={styles.banner__image}
+      >
+        <Image
+          src="/daniel-cover.png"
+          alt="Daniel Szkarupski zdjęcie promocyjne"
+          fill
+        />
       </motion.div>
-      <motion.div variants={container} animate="whileInView" className={styles.banner__header}>
+      <motion.div
+        variants={container}
+        animate="whileInView"
+        className={styles.banner__header}
+      >
         <motion.h1 variants={child}>
           Daniel
           <br /> Szkarupski
         </motion.h1>
-        <motion.div variants={child} className={styles['banner__paragraphs-container']}>
+        <motion.div
+          variants={child}
+          className={styles["banner__paragraphs-container"]}
+        >
           <p>
             <FaShieldAlt /> Bezpieczeństwo
           </p>
@@ -49,11 +64,17 @@ export default function HomeBanner() {
             <FaPuzzlePiece /> Tożsamość
           </p>
         </motion.div>
-        <motion.div variants={child} className={styles['banner__btn-container']}>
-          <a href="https://wesprzyjrn.pl/" className={styles['banner__support-btn']}>
+        <motion.div
+          variants={child}
+          className={styles["banner__btn-container"]}
+        >
+          <a
+            href="https://wspieram.ruch-narodowy.pl/"
+            className={styles["banner__support-btn"]}
+          >
             Wesprzyj
           </a>
-          <a href="/#o-mnie" className={styles['banner__join-btn']}>
+          <a href="/#o-mnie" className={styles["banner__join-btn"]}>
             O mnie
           </a>
         </motion.div>

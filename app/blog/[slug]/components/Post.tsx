@@ -7,6 +7,7 @@ import styles from "../Post.module.scss";
 import PostContent from "./PostContent";
 import PostGallery from "./PostGallery";
 import Image from "next/image";
+import FullScreenImage from "@/app/components/FullScreenImage/FullScreenImage";
 
 type PostProps = {
   post: Post;

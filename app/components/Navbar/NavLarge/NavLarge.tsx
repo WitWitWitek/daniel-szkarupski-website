@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import styles from '../Navbars.module.scss';
+import Link from "next/link";
+import styles from "../Navbars.module.scss";
 
 export default function NavLarge() {
   return (
     <div className={styles.navbar__wrapper}>
       <div className={styles.navbar__container}>
-        <div className={styles['navbar__container--links']}>
+        <div className={styles["navbar__container--links"]}>
           <a href="/#o-mnie" className={styles.navbar__link}>
             O mnie
           </a>
@@ -19,8 +19,13 @@ export default function NavLarge() {
             Kontakt
           </a>
         </div>
-        <div className={styles['navbar__container--btns']}>
-          <a href="https://wesprzyjrn.pl/" className={styles['navbar__support-btn']} target="_blank" rel="noreferrer">
+        <div className={styles["navbar__container--btns"]}>
+          <a
+            href="https://wspieram.ruch-narodowy.pl/"
+            className={styles["navbar__support-btn"]}
+            target="_blank"
+            rel="noreferrer"
+          >
             Wesprzyj
           </a>
         </div>

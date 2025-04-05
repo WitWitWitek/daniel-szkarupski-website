@@ -1,0 +1,100 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/buttons" as *;
+@use "../../styles/headings" as *;
+@use "../../styles/paddings" as *;
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  animation: fadeIn 0.3s ease-in-out;
+  @include fontSize;
+  @include fullscreen-padding;
+  border: none;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.dialog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  &__gallery {
+    width: 100%;
+    height: 400px;
+    @include md {
+      height: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: transparent;
+    position: relative;
+    &-section {
+      overflow: hidden;
+      padding: 0.2rem;
+      @include md {
+        padding: 1rem;
+      }
+      margin: 0.5rem 0;
+    }
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      flex-shrink: 0;
+      padding: 0.5rem 0;
+    }
+    &-image {
+      position: relative;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      margin: auto;
+      border-radius: 10px;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 30;
+    font-size: 1rem;
+    @include btn-cta;
+    border-radius: 50%;
+    padding: 0.25rem;
+    @include sm {
+      padding: 0.25rem;
+    }
+  }
+}

@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import FullScreenImage from "@/app/components/FullScreenImage/FullScreenImage";
 
 interface PostGalleryProps {
   urls: string[];
@@ -19,10 +20,14 @@ interface PostGalleryProps {
 
 export default function PostGallery({ urls }: PostGalleryProps) {
   const [swiper, setSwiper] = useState<null | SwiperType>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   return (
     <>
       <h3>Galeria zdjęć:</h3>
+      {isDialogOpen && (
+        <FullScreenImage setIsDialogOpen={setIsDialogOpen} urls={urls} />
+      )}
       <section className={styles["post__gallery-section"]}>
         <Swiper
           loop={true}
@@ -43,6 +48,7 @@ export default function PostGallery({ urls }: PostGalleryProps) {
                   className={styles["post__gallery-image"]}
                   width={450}
                   height={800}
+                  onClick={() => setIsDialogOpen(true)}
                 />
               </div>
             </SwiperSlide>
